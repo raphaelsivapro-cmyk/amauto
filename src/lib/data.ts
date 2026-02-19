@@ -91,12 +91,8 @@ export const FAQ_DATA = [
         answer: "Il est préférable de prendre rendez-vous pour nous assurer qu'un pont et un technicien sont disponibles pour votre véhicule, mais nous acceptons les urgences selon disponibilité."
     },
     {
-        question: "Prêtez-vous un véhicule de courtoisie ?",
-        answer: "Oui, nous disposons de véhicules de courtoisie disponibles sur réservation pour les interventions de longue durée (plus de 4h)."
-    },
-    {
         question: "Quels moyens de paiement acceptez-vous ?",
-        answer: "Nous acceptons les cartes bancaires (CB, Visa, Mastercard), les espèces et les virements instantanés. Le paiement en 3x ou 4x est également possible sous conditions."
+        answer: "Nous acceptons les cartes bancaires (CB, Visa, Mastercard), les espèces et les virements instantanés."
     },
     {
         question: "La garantie constructeur est-elle préservée ?",

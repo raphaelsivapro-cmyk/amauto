@@ -84,8 +84,8 @@ export function BookingForm() {
                 {step === 1 && (
                     <div className="space-y-8 animate-fade-up">
                         <h3 className="text-xl font-bold text-white uppercase tracking-wide">Sélectionnez votre prestation</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            {['Révision', 'Freinage', 'Pneumatiques', 'Distribution', 'Diagnostic', 'Autre'].map((service) => (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            {['Révision', 'Freinage', 'Pneumatiques', 'Distribution', 'Embrayage', 'Échappement', 'Climatisation', 'Amortisseurs', 'Batterie / Alternateur', 'Diagnostic', 'Autre'].map((service) => (
                                 <button
                                     key={service}
                                     onClick={() => setFormData({ ...formData, service })}

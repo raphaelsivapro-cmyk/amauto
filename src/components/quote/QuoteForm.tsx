@@ -109,6 +109,11 @@ export function QuoteForm() {
                     <option value="freinage" className="text-black">Freinage</option>
                     <option value="pneus" className="text-black">Pneumatiques</option>
                     <option value="distribution" className="text-black">Distribution</option>
+                    <option value="embrayage" className="text-black">Embrayage</option>
+                    <option value="echappement" className="text-black">Échappement</option>
+                    <option value="clim" className="text-black">Climatisation</option>
+                    <option value="amortisseurs" className="text-black">Amortisseurs</option>
+                    <option value="batterie" className="text-black">Batterie / Alternateur</option>
                     <option value="diag" className="text-black">Diagnostic Électronique</option>
                     <option value="autre" className="text-black">Autre demande</option>
                 </select>

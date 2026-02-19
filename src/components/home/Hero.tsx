@@ -16,12 +16,12 @@ export function Hero() {
                     playsInline
                     className="w-full h-full object-cover opacity-50 grayscale-[0.5] contrast-[1.1]"
                 >
-                    <source 
-                        src="https://cdn.pixabay.com/video/2020/08/25/48046-453733055_large.mp4" 
-                        type="video/mp4" 
+                    <source
+                        src="https://cdn.pixabay.com/video/2020/08/25/48046-453733055_large.mp4"
+                        type="video/mp4"
                     />
                 </video>
-                
+
                 {/* Advanced Overlays */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#09090b] via-[#09090b]/80 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-transparent to-transparent" />
@@ -45,7 +45,7 @@ export function Hero() {
 
                     {/* Subtitle */}
                     <p className="text-lg md:text-xl text-gray-300/80 max-w-xl mb-12 leading-relaxed animate-fade-up font-medium" style={{ animationDelay: '200ms' }}>
-                        L&apos;excellence technique au service de votre passion. 
+                        L&apos;excellence technique au service de votre passion.
                         Entretien, diagnostic et performance pour conducteurs exigeants.
                     </p>
 
@@ -65,19 +65,13 @@ export function Hero() {
                     </div>
 
                     {/* Trust Row */}
-                    <div className="mt-20 pt-10 border-t border-white/[0.06] flex flex-wrap items-center gap-10 animate-fade-up" style={{ animationDelay: '450ms' }}>
-                        <div className="flex items-center gap-3">
-                            <div className="flex gap-1">
-                                {[...Array(5)].map((_, i) => (
-                                    <Star key={i} className="w-4 h-4 text-amber-500 fill-amber-500" />
-                                ))}
-                            </div>
-                            <span className="text-sm text-gray-400">Évalué <span className="text-white font-bold">5.0</span> sur Google Business</span>
-                        </div>
-                        <div className="hidden sm:block w-px h-6 bg-white/10" />
+                    <div className="mt-20 pt-10 border-t border-white/[0.06] animate-fade-up" style={{ animationDelay: '450ms' }}>
                         <div className="flex items-center gap-2.5">
                             <Car className="w-4 h-4 text-[var(--color-red)]" />
-                            <span className="text-sm text-gray-400"><span className="text-white font-bold">VIP</span> Service Expert</span>
+                            <span className="text-sm text-gray-400 font-medium lowercase tracking-wide">
+                                <span className="text-white font-black uppercase mr-2 tracking-widest bg-white/5 py-1 px-3 rounded-lg border border-white/10 shadow-glow-sm">VIP</span>
+                                Service Expert en Haute Performance
+                            </span>
                         </div>
                     </div>
                 </div>
