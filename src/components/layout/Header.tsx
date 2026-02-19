@@ -36,14 +36,12 @@ export function Header() {
             )}
         >
             <div className="container px-4 md:px-6 flex items-center justify-between">
-                {/* Logo */}
-                <Link href="/" className="flex items-center gap-3 group">
-                    <div className="w-10 h-10 bg-[var(--color-red)] rounded-xl flex items-center justify-center text-white font-extrabold text-lg shadow-glow group-hover:scale-110 transition-transform duration-300">
-                        AM
-                    </div>
-                    <span className="text-xl font-extrabold tracking-tight text-white">
-                        AUTO
-                    </span>
+                <Link href="/" className="flex items-center group">
+                    <img
+                        src="/logo.png"
+                        alt="AM AUTO Logo"
+                        className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
                 </Link>
 
                 {/* Desktop Nav */}
