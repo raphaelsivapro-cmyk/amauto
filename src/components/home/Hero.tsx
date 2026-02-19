@@ -28,23 +28,23 @@ export function Hero() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(220,38,38,0.1),transparent_70%)]" />
             </div>
 
-            <div className="container relative z-10 px-6 md:px-8">
+            <div className="container relative z-10 px-6 md:px-8 pt-32 md:pt-40">
                 <div className="max-w-4xl">
                     {/* Badge */}
-                    <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 animate-fade-up backdrop-blur-md">
+                    <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.08] mb-10 animate-fade-up backdrop-blur-md">
                         <span className="flex h-2 w-2 rounded-full bg-[var(--color-red)] shadow-[0_0_10px_var(--color-red)]" />
                         <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-gray-300">Atelier Haute Performance · Floirac</span>
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-[clamp(3rem,8vw,8rem)] font-black tracking-[-0.05em] mb-8 leading-[0.85] animate-fade-up" style={{ animationDelay: '100ms' }}>
+                    <h1 className="text-[clamp(3rem,8vw,8rem)] font-black tracking-[-0.05em] mb-10 leading-[1.1] animate-fade-up" style={{ animationDelay: '100ms' }}>
                         <span className="block opacity-90">VOTRE ATELIER</span>
                         <span className="text-gradient-light text-glow-white">MÉCANIQUE</span>
                         <span className="text-[var(--color-red)] text-glow">.</span>
                     </h1>
 
                     {/* Subtitle */}
-                    <p className="text-lg md:text-xl text-gray-300/80 max-w-xl mb-12 leading-relaxed animate-fade-up font-medium" style={{ animationDelay: '200ms' }}>
+                    <p className="text-lg md:text-xl text-gray-300/80 max-w-xl mb-14 leading-relaxed animate-fade-up font-medium" style={{ animationDelay: '200ms' }}>
                         L&apos;excellence technique au service de votre passion.
                         Entretien, diagnostic et performance pour conducteurs exigeants.
                     </p>
