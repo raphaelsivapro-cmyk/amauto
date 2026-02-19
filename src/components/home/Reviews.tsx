@@ -1,54 +1,71 @@
 'use client';
 
 import { Section } from "@/components/ui/Section";
-import { Star, Quote, CheckCircle2 } from "lucide-react";
+import { Star, CheckCircle2 } from "lucide-react";
 import { REVIEWS_DATA } from "@/lib/data";
+import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 export function Reviews() {
     return (
-        <Section background="charcoal" className="py-32 relative overflow-hidden">
-            {/* Ambient Background */}
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[var(--color-charcoal-light)] to-transparent pointer-events-none" />
+        <Section background="charcoal" className="py-28 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
-            <div className="text-center mb-20 animate-fade-up relative z-10">
-                <span className="text-[var(--color-red)] font-bold tracking-widest uppercase text-sm mb-4 block">Témoignages</span>
-                <h2 className="text-4xl md:text-6xl font-extrabold mb-6 text-white leading-tight">
-                    LA CONFIANCE <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">SE MÉRITE</span>
-                </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 max-w-7xl mx-auto">
-                {REVIEWS_DATA.slice(0, 3).map((review, i) => (
-                    <div
-                        key={review.id}
-                        className="p-10 rounded-[var(--radius-xl)] bg-[var(--color-charcoal-light)] border border-white/5 flex flex-col relative group backdrop-blur-sm transition-all duration-500 hover:border-white/10 hover:bg-white/5"
-                        style={{ animationDelay: `${i * 100}ms` }}
-                    >
-                        <div className="flex gap-1 mb-8">
-                            {[...Array(5)].map((_, starIndex) => (
-                                <Star
-                                    key={starIndex}
-                                    className={`w-4 h-4 ${starIndex < review.rating ? "text-[var(--color-red)] fill-current" : "text-gray-700"}`}
-                                />
+            <ScrollReveal>
+                <div className="text-center mb-16 relative z-10">
+                    <span className="text-[var(--color-red)] font-semibold tracking-[0.15em] uppercase text-[11px] mb-3 block">Témoignages</span>
+                    <h2 className="text-3xl md:text-5xl font-extrabold mb-5 text-white leading-tight">
+                        LA CONFIANCE{' '}
+                        <span className="text-gray-500">SE MÉRITE</span>
+                    </h2>
+                    {/* Google badge */}
+                    <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.06] mt-2">
+                        <div className="flex gap-0.5">
+                            {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="w-3 h-3 text-amber-400 fill-amber-400" />
                             ))}
                         </div>
+                        <span className="text-xs text-gray-400">Noté <span className="text-white font-semibold">5.0/5</span> sur Google</span>
+                    </div>
+                </div>
+            </ScrollReveal>
 
-                        <p className="text-gray-300 text-lg leading-relaxed flex-grow relative z-10 font-light mb-8">
-                            "{review.text}"
-                        </p>
-
-                        <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
-                            <div>
-                                <h4 className="font-bold text-white uppercase tracking-wide text-sm mb-1">{review.name}</h4>
-                                <p className="text-xs text-gray-500 font-medium">{review.date}</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 relative z-10 max-w-6xl mx-auto">
+                {REVIEWS_DATA.slice(0, 3).map((review, i) => (
+                    <ScrollReveal key={review.id} delay={i * 100}>
+                        <div className="group p-7 rounded-2xl bg-[#0f0f11] border border-white/[0.06] hover:border-white/[0.1] flex flex-col transition-all duration-400 h-full">
+                            {/* Stars */}
+                            <div className="flex gap-0.5 mb-5">
+                                {[...Array(5)].map((_, starIndex) => (
+                                    <Star
+                                        key={starIndex}
+                                        className={`w-3.5 h-3.5 ${starIndex < review.rating ? "text-amber-400 fill-amber-400" : "text-gray-800"}`}
+                                    />
+                                ))}
                             </div>
-                            <div className="flex items-center gap-2 text-xs text-gray-500 uppercase tracking-wider font-bold opacity-50">
-                                <CheckCircle2 className="w-4 h-4" />
-                                <span>Vérifié</span>
+
+                            {/* Quote */}
+                            <p className="text-gray-300 text-[14px] leading-relaxed flex-grow mb-7">
+                                &ldquo;{review.text}&rdquo;
+                            </p>
+
+                            {/* Author */}
+                            <div className="pt-5 border-t border-white/[0.06] flex items-center justify-between">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-8 h-8 rounded-full bg-white/[0.06] flex items-center justify-center text-white text-[11px] font-bold">
+                                        {review.name.split(' ').map(n => n[0]).join('')}
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-white text-sm leading-tight">{review.name}</h4>
+                                        <p className="text-[11px] text-gray-500 mt-0.5">{review.date}</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-1 text-[11px] text-emerald-600 font-medium">
+                                    <CheckCircle2 className="w-3 h-3" />
+                                    <span>Vérifié</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </ScrollReveal>
                 ))}
             </div>
         </Section>
