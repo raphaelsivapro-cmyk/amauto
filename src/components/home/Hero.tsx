@@ -14,10 +14,10 @@ export function Hero() {
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover opacity-50 grayscale-[0.5] contrast-[1.1]"
+                    className="w-full h-full object-cover opacity-60 grayscale-[0.3] contrast-[1.2]"
                 >
                     <source
-                        src="https://cdn.pixabay.com/video/2020/08/25/48046-453733055_large.mp4"
+                        src="https://cdn.pixabay.com/video/2020/10/20/52943-471336849_large.mp4"
                         type="video/mp4"
                     />
                 </video>
