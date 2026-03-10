@@ -73,6 +73,7 @@ export function QuoteForm() {
                         onChange={e => setFormData({ ...formData, email: e.target.value })}
                     />
                 </div>
+
                 <div className="space-y-2">
                     <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Téléphone</label>
                     <input

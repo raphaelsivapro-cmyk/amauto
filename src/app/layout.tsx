@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "AM AUTO — Garage Mécanique à Floirac",
   description: "Entretien, réparation et diagnostic de votre véhicule à Floirac. Prix transparents, service rapide, expertise technique.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

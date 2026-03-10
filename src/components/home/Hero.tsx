@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-import { ArrowRight, ChevronDown, Star, Car, Award } from "lucide-react";
+import { ArrowRight, Star, Car, Award } from "lucide-react";
 
 export function Hero() {
     return (
-        <section className="relative h-screen w-full flex items-center overflow-hidden mesh-gradient">
+        <section className="relative min-h-[100svh] w-full flex flex-col justify-center overflow-hidden mesh-gradient pt-32 pb-16 md:py-32">
             {/* Cinematic Video Background */}
             <div className="absolute inset-0 z-0">
                 <video
@@ -28,7 +28,7 @@ export function Hero() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(220,38,38,0.1),transparent_70%)]" />
             </div>
 
-            <div className="container relative z-10 px-6 md:px-8 pt-32 md:pt-40">
+            <div className="container relative z-10 px-6 md:px-8">
                 <div className="max-w-4xl">
                     {/* Badge */}
                     <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.08] mb-10 animate-fade-up backdrop-blur-md">
@@ -74,15 +74,6 @@ export function Hero() {
                             </span>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            {/* Scroll hint */}
-            <div className="absolute bottom-10 left-10 flex items-center gap-4 text-gray-500 animate-fade-up" style={{ animationDelay: '600ms' }}>
-                <div className="w-px h-12 bg-gradient-to-b from-transparent via-[var(--color-red)]/50 to-transparent" />
-                <div className="flex flex-col gap-1">
-                    <span className="text-[10px] tracking-[0.3em] uppercase font-bold text-white/40">SCROLL</span>
-                    <ChevronDown className="w-4 h-4 animate-bounce" />
                 </div>
             </div>
         </section>

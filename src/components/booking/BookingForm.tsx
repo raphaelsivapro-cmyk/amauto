@@ -39,7 +39,7 @@ export function BookingForm() {
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-4 uppercase tracking-tight">Rendez-vous Confirmé</h3>
                 <p className="text-gray-400 mb-8 max-w-md mx-auto">
-                    Un email de confirmation a été envoyé à {formData.email}.
+                    Nous vous contacterons très prochainement pour confirmer votre rendez-vous.
                 </p>
                 <Button onClick={() => window.location.href = '/'} variant="outline">
                     Retour
@@ -167,6 +167,7 @@ export function BookingForm() {
                                     onChange={(e) => setFormData({ ...formData, vehicle: e.target.value })}
                                 />
                             </div>
+
                             <div className="space-y-2">
                                 <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Email</label>
                                 <input
@@ -176,6 +177,7 @@ export function BookingForm() {
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                 />
                             </div>
+
                             <div className="space-y-2">
                                 <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Téléphone</label>
                                 <input
@@ -189,7 +191,7 @@ export function BookingForm() {
 
                         <div className="flex justify-between pt-8 border-t border-white/5">
                             <Button variant="ghost" onClick={() => setStep(2)} className="text-gray-400 hover:text-white">Retour</Button>
-                            <Button onClick={handleSubmit} disabled={!formData.name || !formData.email}>
+                            <Button onClick={handleSubmit} disabled={!formData.name || !formData.email || !formData.phone}>
                                 Confirmer
                             </Button>
                         </div>

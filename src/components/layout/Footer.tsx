@@ -11,7 +11,7 @@ export function Footer() {
                     {/* Map — 4 cols */}
                     <div className="lg:col-span-4 rounded-2xl overflow-hidden border border-white/[0.06] h-[260px]">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.8!2d-0.5!3d44.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDUwJzEwLjgiTiAwwrAzMScwMC4wIlc!5e0!3m2!1sfr!2sfr!4v1"
+                            src="https://maps.google.com/maps?q=161%20bis%20rue%20Emile%20Combes,%2033270%20Floirac&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             width="100%"
                             height="100%"
                             style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(0.85) contrast(1.1)' }}
@@ -25,11 +25,9 @@ export function Footer() {
                     {/* Brand — 3 cols */}
                     <div className="lg:col-span-3 space-y-5">
                         <Link href="/" className="block -ml-3">
-                            <img
-                                src="/logo.png"
-                                alt="AM AUTO Logo"
-                                className="h-14 md:h-16 w-auto object-contain"
-                            />
+                            <span className="text-2xl font-black tracking-tighter text-white px-3">
+                                AM AUTO
+                            </span>
                         </Link>
                         <p className="text-gray-500 text-xs leading-relaxed max-w-[220px]">
                             L&apos;excellence automobile à Floirac. Entretien, réparation et expertise technique.
@@ -48,7 +46,7 @@ export function Footer() {
                     <div className="lg:col-span-2">
                         <h3 className="text-[11px] font-semibold mb-4 text-gray-400 uppercase tracking-[0.15em]">Navigation</h3>
                         <ul className="space-y-2.5">
-                            {['Accueil', 'Prestations', 'Tarifs', 'Avis', 'Contact'].map((item) => (
+                            {['Accueil', 'Prestations', 'Tarifs', 'Contact'].map((item) => (
                                 <li key={item}>
                                     <Link href={`/${item.toLowerCase() === 'accueil' ? '' : item.toLowerCase()}`} className="text-gray-500 hover:text-white transition-colors text-sm">
                                         {item}
@@ -71,25 +69,14 @@ export function Footer() {
                                     <Phone className="w-3.5 h-3.5 text-gray-600 shrink-0" />
                                     <a href="tel:0634612212" className="hover:text-white transition-colors">06 34 61 22 12</a>
                                 </li>
-                                <li className="flex items-center gap-2.5">
-                                    <Mail className="w-3.5 h-3.5 text-gray-600 shrink-0" />
-                                    <a href="mailto:contact@am-auto.fr" className="hover:text-white transition-colors">contact@am-auto.fr</a>
-                                </li>
+
                             </ul>
                         </div>
 
                         <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] space-y-2 text-xs">
                             <div className="flex justify-between">
-                                <span className="text-gray-600">Lun — Ven</span>
+                                <span className="text-gray-600">Lundi — Vendredi</span>
                                 <span className="text-gray-300 font-medium">09:00 – 18:00</span>
-                            </div>
-                            <div className="flex justify-between">
-                                <span className="text-gray-600">Samedi</span>
-                                <span className="text-gray-300 font-medium">09:00 – 18:00</span>
-                            </div>
-                            <div className="flex justify-between pt-1.5 border-t border-white/[0.04]">
-                                <span className="text-gray-600">Dimanche</span>
-                                <span className="text-[var(--color-red)] font-semibold">Fermé</span>
                             </div>
                         </div>
                     </div>
