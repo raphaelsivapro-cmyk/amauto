@@ -64,16 +64,6 @@ export function Hero() {
                         </Link>
                     </div>
 
-                    {/* Trust Row */}
-                    <div className="mt-20 pt-10 border-t border-white/[0.06] animate-fade-up" style={{ animationDelay: '450ms' }}>
-                        <div className="flex items-center gap-2.5">
-                            <Car className="w-4 h-4 text-[var(--color-red)]" />
-                            <span className="text-sm text-gray-400 font-medium lowercase tracking-wide">
-                                <span className="text-white font-black uppercase mr-2 tracking-widest bg-white/5 py-1 px-3 rounded-lg border border-white/10 shadow-glow-sm">VIP</span>
-                                Service Expert en Haute Performance
-                            </span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
