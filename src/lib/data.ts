@@ -27,7 +27,7 @@ export const SERVICES_DATA = [
         price_from: 110,
         duration_minutes: 90,
         description: "Remplacement des organes de freinage pour votre sécurité. Diagnostic du système complet inclus.",
-        image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=1000"
+        image: "/images/brakes.png"
     },
     {
         id: "4",
@@ -37,7 +37,7 @@ export const SERVICES_DATA = [
         price_from: 450,
         duration_minutes: 240,
         description: "Remplacement courroie de distribution, pompe à eau et galets. À faire selon préconisation constructeur.",
-        image: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=1000"
+        image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=1000"
     },
     {
         id: "5",
