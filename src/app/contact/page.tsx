@@ -57,7 +57,10 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="text-xl font-bold text-white mb-2 uppercase tracking-wide">Horaires</h3>
                                         <div className="text-gray-400 space-y-1">
-                                            <p className="flex justify-between w-48"><span>Lundi - Vendredi :</span> <span className="text-white">09:00 - 18:00</span></p>
+                                            <div className="flex flex-wrap justify-between w-full max-w-xs gap-4">
+                                                <span>Lundi &mdash; Vendredi</span>
+                                                <span className="text-white font-medium">09:00 &mdash; 18:00</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

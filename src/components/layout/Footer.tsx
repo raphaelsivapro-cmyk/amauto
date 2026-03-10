@@ -74,9 +74,9 @@ export function Footer() {
                         </div>
 
                         <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.04] space-y-2 text-xs">
-                            <div className="flex justify-between">
-                                <span className="text-gray-600">Lundi — Vendredi</span>
-                                <span className="text-gray-300 font-medium">09:00 – 18:00</span>
+                            <div className="flex flex-col xl:flex-row xl:justify-between gap-1">
+                                <span className="text-gray-500">Lundi &mdash; Vendredi</span>
+                                <span className="text-gray-300 font-medium">09:00 &mdash; 18:00</span>
                             </div>
                         </div>
                     </div>
