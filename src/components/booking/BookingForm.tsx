@@ -19,7 +19,7 @@ const STEPS = [
 
 export function BookingForm() {
     const [step, setStep] = useState(1);
-    const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
     const [formData, setFormData] = useState({
         service: '',
         date: null as Date | null,
@@ -38,8 +38,39 @@ export function BookingForm() {
 
     const handleSubmit = async () => {
         setStatus('loading');
-        await new Promise(r => setTimeout(r, 2000));
-        setStatus('success');
+
+        try {
+            // Format date carefully if present
+            const formattedDate = formData.date
+                ? formData.date.toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+                : 'Non spécifiée';
+
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: "551b3d41-b012-4e86-8c60-9059c58bb316",
+                    subject: `📅 Nouveau RDV AM AUTO : ${formData.service}`,
+                    from_name: formData.name,
+                    ...formData,
+                    date: formattedDate // overwrite date object with readable string
+                }),
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                setStatus('success');
+            } else {
+                console.error("Web3Forms error:", result);
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error("Submission failed", error);
+            setStatus('error');
+        }
     };
 
     if (status === 'success') {
@@ -227,11 +258,23 @@ export function BookingForm() {
                             />
                         </div>
 
-                        <div className="flex justify-between pt-8 border-t border-white/5 mt-8">
-                            <Button variant="ghost" onClick={() => setStep(2)} className="text-gray-400 hover:text-white">Retour</Button>
-                            <Button onClick={handleSubmit} disabled={!formData.name || !formData.email || !formData.phone || !formData.vehicle_plate || !formData.problem_desc}>
-                                Confirmer
-                            </Button>
+                        <div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-white/5 mt-8 gap-4">
+                            <Button variant="ghost" onClick={() => setStep(2)} className="text-gray-400 hover:text-white order-2 sm:order-1 w-full sm:w-auto">Retour</Button>
+
+                            <div className="flex flex-col items-center sm:items-end order-1 sm:order-2 w-full sm:w-auto">
+                                <Button
+                                    onClick={handleSubmit}
+                                    disabled={status === 'loading' || !formData.name || !formData.email || !formData.phone || !formData.vehicle_plate || !formData.problem_desc}
+                                    className="w-full sm:w-auto"
+                                >
+                                    {status === 'loading' ? 'Confirmation...' : 'Confirmer'}
+                                </Button>
+                                {status === 'error' && (
+                                    <p className="text-red-400 text-xs font-medium mt-2 text-center sm:text-right">
+                                        Erreur lors de l'envoi. Veuillez réessayer.
+                                    </p>
+                                )}
+                            </div>
                         </div>
                     </div>
                 )}

@@ -40,10 +40,32 @@ export function QuoteForm() {
         e.preventDefault();
         setStatus('loading');
 
-        // Simulate API call
-        console.log("Submitting quote:", formData);
-        await new Promise(r => setTimeout(r, 1500));
-        setStatus('success');
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: "551b3d41-b012-4e86-8c60-9059c58bb316",
+                    subject: `🚗 Nouveau Devis AM AUTO : ${formData.service_type || 'Général'}`,
+                    from_name: formData.name,
+                    ...formData,
+                }),
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                setStatus('success');
+            } else {
+                console.error("Web3Forms error:", result);
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error("Submission failed", error);
+            setStatus('error');
+        }
     };
 
     if (status === 'success') {
@@ -188,6 +210,13 @@ export function QuoteForm() {
                     {status === 'loading' ? 'Envoi en cours...' : 'Envoyer la demande'}
                     {!status.startsWith('load') && <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />}
                 </Button>
+
+                {status === 'error' && (
+                    <p className="text-red-400 text-sm text-center font-medium mt-4">
+                        Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter par téléphone.
+                    </p>
+                )}
+
                 <p className="text-center text-xs text-gray-500 mt-4">
                     En soumettant ce formulaire, vous acceptez d'être recontacté par AM AUTO.
                 </p>
