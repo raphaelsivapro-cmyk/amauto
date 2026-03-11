@@ -9,6 +9,7 @@ interface ServiceCardProps {
         price_from?: number;
         old_price?: number;
         promo_badge?: string;
+        promo_desc?: string;
         duration_minutes?: number;
         image?: string;
         category: string;
@@ -50,6 +51,18 @@ export function ServiceCard({ service }: ServiceCardProps) {
                 <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-2">
                     {service.description}
                 </p>
+
+                {service.promo_badge && (
+                    <div className="mb-6 p-4 rounded-2xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20">
+                        <p className="text-[var(--color-red)] font-black text-sm uppercase tracking-tight mb-1 flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-[var(--color-red)] animate-pulse" />
+                            Offre du moment : {service.promo_badge}
+                        </p>
+                        {service.promo_desc && (
+                            <p className="text-white/80 text-xs font-medium">{service.promo_desc}</p>
+                        )}
+                    </div>
+                )}
 
                 <div className="flex items-center justify-between border-t border-white/5 pt-4">
                     <div className="flex flex-col">

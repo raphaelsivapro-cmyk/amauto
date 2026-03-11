@@ -64,14 +64,23 @@ export function Hero() {
                         </Link>
                     </div>
 
-                    {/* Decorative Divider */}
-                    <div className="mt-20 pt-10 border-t border-white/[0.06] flex items-center gap-4 animate-fade-up" style={{ animationDelay: '450ms' }}>
-                        <div className="flex items-center justify-center min-w-10 w-10 h-10 rounded-full bg-[var(--color-red)] text-white font-black text-sm shadow-glow">
-                            %
-                        </div>
-                        <div>
-                            <p className="text-white font-bold uppercase tracking-tight text-sm">Offre du moment : -20% sur le kit de distribution</p>
-                            <p className="text-gray-400 text-xs font-medium mt-1">Valable du 11 mars au 11 avril</p>
+                    {/* Decorative Divider & Promos */}
+                    <div className="mt-20 pt-10 border-t border-white/[0.06] animate-fade-up" style={{ animationDelay: '450ms' }}>
+                        <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 md:p-8 rounded-3xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20 shadow-[0_0_30px_rgba(220,38,38,0.15)]">
+                            <div className="flex items-center justify-center min-w-16 w-16 h-16 rounded-full bg-[var(--color-red)] text-white font-black text-2xl shadow-glow">
+                                %
+                            </div>
+                            <div>
+                                <p className="text-[var(--color-red)] font-black uppercase tracking-tight text-xl md:text-2xl mb-2 text-glow">
+                                    Offre du moment : -20%
+                                </p>
+                                <p className="text-white text-base md:text-lg font-bold mb-1">
+                                    Sur le Kit de distribution & kit d'accessoires
+                                </p>
+                                <p className="text-gray-400 text-sm font-medium">
+                                    Valable du 11 mars au 11 avril
+                                </p>
+                            </div>
                         </div>
                     </div>
 
