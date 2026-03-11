@@ -4,8 +4,22 @@ import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import { cn } from '@/lib/utils';
 
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ChevronDown } from 'lucide-react';
+
+const SERVICES = [
+    { id: 'revision-vidange', label: 'Révision & Vidange' },
+    { id: 'freinage', label: 'Freinage (Plaquettes / Disques)' },
+    { id: 'pneumatiques', label: 'Pneumatiques (Montage / Équilibrage)' },
+    { id: 'distribution', label: 'Kit de distribution & accessoires' },
+    { id: 'embrayage', label: 'Kit Embrayage & Transmission' },
+    { id: 'echappement', label: 'Échappement & Dépollution' },
+    { id: 'suspension', label: 'Suspension & Direction' },
+    { id: 'injection', label: 'Injection & Moteur' },
+    { id: 'diagnostic', label: 'Diagnostic Électronique' },
+    { id: 'autre', label: 'Autre demande' }
+];
 
 export function QuoteForm() {
     const searchParams = useSearchParams();
@@ -19,6 +33,7 @@ export function QuoteForm() {
         service_type: servicePreselected || '',
         message: ''
     });
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -98,25 +113,62 @@ export function QuoteForm() {
                 </div>
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-2 relative z-20">
                 <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Type de prestation</label>
-                <select
-                    className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white focus:border-[var(--color-red)] focus:ring-1 focus:ring-[var(--color-red)] outline-none transition-all appearance-none"
-                    value={formData.service_type}
-                    onChange={e => setFormData({ ...formData, service_type: e.target.value })}
+
+                {/* Custom Dropdown to replace native <select> */}
+                <div
+                    className="relative w-full"
+                    tabIndex={0}
+                    onBlur={(e) => {
+                        // Close dropdown if focus moves outside this component
+                        if (!e.currentTarget.contains(e.relatedTarget)) {
+                            setIsDropdownOpen(false);
+                        }
+                    }}
                 >
-                    <option value="" className="text-black">Sélectionnez une prestation...</option>
-                    <option value="revision-vidange" className="text-black">Révision & Vidange</option>
-                    <option value="freinage" className="text-black">Freinage (Plaquettes / Disques)</option>
-                    <option value="pneumatiques" className="text-black">Pneumatiques (Montage / Équilibrage)</option>
-                    <option value="distribution" className="text-black">Kit de distribution & accessoires</option>
-                    <option value="embrayage" className="text-black">Kit Embrayage & Transmission</option>
-                    <option value="echappement" className="text-black">Échappement & Dépollution</option>
-                    <option value="suspension" className="text-black">Suspension & Direction</option>
-                    <option value="injection" className="text-black">Injection & Moteur</option>
-                    <option value="diagnostic" className="text-black">Diagnostic Électronique</option>
-                    <option value="autre" className="text-black">Autre demande</option>
-                </select>
+                    <button
+                        type="button"
+                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                        className={cn(
+                            "w-full flex items-center justify-between bg-black/20 border border-white/10 rounded-lg p-4 text-left focus:border-[var(--color-red)] outline-none transition-all",
+                            formData.service_type ? "text-white" : "text-gray-600",
+                            isDropdownOpen && "border-[var(--color-red)] ring-1 ring-[var(--color-red)]"
+                        )}
+                    >
+                        <span className="truncate">
+                            {formData.service_type
+                                ? SERVICES.find(s => s.id === formData.service_type)?.label || 'Sélectionnez une prestation...'
+                                : 'Sélectionnez une prestation...'}
+                        </span>
+                        <ChevronDown className={cn("w-5 h-5 transition-transform text-white", isDropdownOpen && "rotate-180")} />
+                    </button>
+
+                    {isDropdownOpen && (
+                        <div className="absolute top-full left-0 w-full mt-2 bg-[var(--color-charcoal)] border border-[var(--color-red)]/50 rounded-lg shadow-2xl z-50 overflow-hidden animate-fade-down animate-duration-150">
+                            <div className="max-h-60 overflow-y-auto custom-scrollbar">
+                                {SERVICES.map((service) => (
+                                    <button
+                                        key={service.id}
+                                        type="button"
+                                        onClick={() => {
+                                            setFormData({ ...formData, service_type: service.id });
+                                            setIsDropdownOpen(false);
+                                        }}
+                                        className={cn(
+                                            "w-full text-left px-4 py-3 text-sm transition-colors",
+                                            formData.service_type === service.id
+                                                ? "bg-[var(--color-red)] text-white font-bold"
+                                                : "text-gray-300 hover:bg-white/10 hover:text-white"
+                                        )}
+                                    >
+                                        {service.label}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
             </div>
 
             <div className="space-y-2 relative z-10">
