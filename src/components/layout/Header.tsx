@@ -90,7 +90,7 @@ export function Header() {
 
             {/* Mobile Nav */}
             {isOpen && (
-                <div className="absolute top-full left-0 w-full glass border-t border-white/5 lg:hidden animate-fade-up">
+                <div className="absolute top-full left-0 w-full h-[100dvh] bg-[#09090b] border-t border-white/5 lg:hidden animate-fade-up overflow-y-auto pb-32">
                     <nav className="container p-4 flex flex-col gap-1">
                         {navigation.map((item) => (
                             <Link
