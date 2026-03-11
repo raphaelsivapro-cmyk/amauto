@@ -33,7 +33,7 @@ export function Hero() {
                     {/* Badge */}
                     <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.08] mb-10 animate-fade-up backdrop-blur-md">
                         <span className="flex h-2 w-2 rounded-full bg-[var(--color-red)] shadow-[0_0_10px_var(--color-red)]" />
-                        <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-gray-300">Atelier Haute Performance · Floirac</span>
+                        <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-gray-300">Entretien & Réparation Multimarques · Floirac</span>
                     </div>
 
                     {/* Headline */}
@@ -45,8 +45,7 @@ export function Hero() {
 
                     {/* Subtitle */}
                     <p className="text-lg md:text-xl text-gray-300/80 max-w-xl mb-14 leading-relaxed animate-fade-up font-medium" style={{ animationDelay: '200ms' }}>
-                        L&apos;excellence technique au service de votre passion.
-                        Entretien, diagnostic et performance pour conducteurs exigeants.
+                        Votre garagiste de confiance pour l'entretien, le diagnostic et la réparation de votre véhicule au quotidien.
                     </p>
 
                     {/* CTAs */}
