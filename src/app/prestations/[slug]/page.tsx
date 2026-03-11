@@ -49,7 +49,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     </div>
                                     <div>
                                         <p className="text-[var(--color-red)] font-black uppercase tracking-tight text-base mb-0.5 flex items-center gap-2">
-                                            Offre du moment : {service.promo_badge}
+                                            Offre du moment sur le Kit de distribution : {service.promo_badge}
                                         </p>
                                         {service.promo_desc && (
                                             <p className="text-gray-300 text-xs font-medium">

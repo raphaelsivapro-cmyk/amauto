@@ -44,7 +44,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
                         </div>
                         <div className="px-2.5 py-1.5 bg-black/80 backdrop-blur-md rounded-xl text-right border border-[var(--color-red)]/30 shadow-lg">
                             <p className="text-[9px] font-black text-[var(--color-red)] uppercase tracking-wider mb-0.5">
-                                Offre du moment
+                                Offre du moment sur le Kit de distribution
                             </p>
                             {service.promo_desc && (
                                 <p className="text-[10px] text-white/90 font-medium leading-tight">
