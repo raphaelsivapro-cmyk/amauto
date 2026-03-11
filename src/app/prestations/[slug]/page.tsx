@@ -28,7 +28,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/40 to-transparent z-10" />
 
                     <div className="container relative z-20 px-6">
-                        <Link href="/prestations" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 group font-bold text-xs uppercase tracking-widest">
+                        <Link href="/prestations" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mt-20 mb-8 relative z-50 group font-bold text-xs uppercase tracking-widest">
                             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                             Retour aux prestations
                         </Link>
