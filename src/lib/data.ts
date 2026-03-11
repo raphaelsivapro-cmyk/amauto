@@ -86,7 +86,7 @@ export const SERVICES_DATA = [
         category: "reparations",
         price_from: 120,
         duration_minutes: 60,
-        description: "Remplacement de silencieux, catalyseur, collecteur d'échappement, sonde lambda et nettoyage FAP (Filtre À Particules).",
+        description: "Remplacement de collecteur d'échappement, sonde lambda et nettoyage FAP (Filtre À Particules).",
         image: "/images/service-exhaust.png"
     }
 ];
