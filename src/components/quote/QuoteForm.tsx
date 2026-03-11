@@ -52,7 +52,7 @@ export function QuoteForm() {
         <form onSubmit={handleSubmit} className="bg-[var(--color-charcoal-light)] p-8 md:p-12 rounded-[var(--radius-xl)] border border-white/5 shadow-2xl space-y-8 animate-fade-up">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Nom Complet</label>
+                    <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Nom Prénom</label>
                     <input
                         type="text"
                         required

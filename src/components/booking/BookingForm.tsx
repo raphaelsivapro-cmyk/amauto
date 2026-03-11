@@ -177,11 +177,11 @@ export function BookingForm() {
                         <h3 className="text-xl font-bold text-white uppercase tracking-wide">Vos informations</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Nom complet</label>
+                                <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Nom Prénom</label>
                                 <input
                                     type="text"
                                     className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white focus:border-[var(--color-red)] outline-none"
-                                    placeholder="Votre Nom"
+                                    placeholder="Nom Prénom"
                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                 />
                             </div>
