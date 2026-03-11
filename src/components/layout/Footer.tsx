@@ -9,20 +9,17 @@ export function Footer() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-14">
 
                     {/* Map — 4 cols */}
-                    <div className="lg:col-span-4 rounded-2xl border border-white/[0.06] h-[260px] overflow-hidden relative group">
-                        <div className="w-full h-full grayscale invert-[90%] hue-rotate-180 opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:invert-0 group-hover:hue-rotate-0 transition-all duration-1000 ease-in-out cursor-pointer pointer-events-auto">
-                            <iframe
-                                src="https://maps.google.com/maps?q=161%20bis%20rue%20Emile%20Combes,%2033270%20Floirac&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                title="AM AUTO Floirac"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
+                    <div className="lg:col-span-4 rounded-2xl overflow-hidden border border-white/[0.06] h-[260px]">
+                        <iframe
+                            src="https://maps.google.com/maps?q=161%20bis%20rue%20Emile%20Combes,%2033270%20Floirac&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(0.85) contrast(1.1)' }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="AM AUTO Floirac"
+                        />
                     </div>
 
                     {/* Brand — 3 cols */}
