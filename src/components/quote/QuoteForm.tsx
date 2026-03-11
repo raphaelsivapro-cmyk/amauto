@@ -57,7 +57,7 @@ export function QuoteForm() {
                         type="text"
                         required
                         className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white placeholder:text-gray-600 focus:border-[var(--color-red)] focus:ring-1 focus:ring-[var(--color-red)] outline-none transition-all"
-                        placeholder="Jean Dupont"
+                        placeholder="Nom Prénom"
                         value={formData.name}
                         onChange={e => setFormData({ ...formData, name: e.target.value })}
                     />
@@ -68,7 +68,7 @@ export function QuoteForm() {
                         type="email"
                         required
                         className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white placeholder:text-gray-600 focus:border-[var(--color-red)] focus:ring-1 focus:ring-[var(--color-red)] outline-none transition-all"
-                        placeholder="jean@exemple.com"
+                        placeholder="Email"
                         value={formData.email}
                         onChange={e => setFormData({ ...formData, email: e.target.value })}
                     />
@@ -80,7 +80,7 @@ export function QuoteForm() {
                         type="tel"
                         required
                         className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white placeholder:text-gray-600 focus:border-[var(--color-red)] focus:ring-1 focus:ring-[var(--color-red)] outline-none transition-all"
-                        placeholder="06 00 00 00 00"
+                        placeholder="Tél"
                         value={formData.phone}
                         onChange={e => setFormData({ ...formData, phone: e.target.value })}
                     />
