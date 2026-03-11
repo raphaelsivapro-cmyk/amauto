@@ -64,6 +64,9 @@ export function Hero() {
                         </Link>
                     </div>
 
+                    {/* Decorative Divider */}
+                    <div className="mt-20 pt-10 border-t border-white/[0.06] animate-fade-up" style={{ animationDelay: '450ms' }} />
+
                 </div>
             </div>
         </section>
