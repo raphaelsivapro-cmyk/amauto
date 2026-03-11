@@ -22,7 +22,7 @@ export const SERVICES_DATA = [
     {
         id: "3",
         slug: "freinage",
-        title: "Disques et Plaquettes de Frein",
+        title: "Disques & Plaquettes de Frein",
         category: "entretien",
         price_from: 110,
         duration_minutes: 90,
