@@ -44,7 +44,7 @@ export const SERVICES_DATA = [
         slug: "diagnostic-electronique",
         title: "Diagnostic Électronique",
         category: "autres",
-        price_from: 49,
+        price_from: 50,
         duration_minutes: 45,
         description: "Lecture des codes défauts, diagnostic panne moteur ou voyant tableau de bord avec valise multi-marques.",
         image: "/images/diagnostic-modern.png"
