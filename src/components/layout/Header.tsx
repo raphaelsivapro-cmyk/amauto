@@ -28,9 +28,11 @@ export function Header() {
         <header
             className={cn(
                 "fixed top-0 z-50 w-full transition-all duration-500",
-                scrolled
-                    ? "py-3 glass shadow-lg"
-                    : "py-5 bg-gradient-to-b from-black/60 to-transparent"
+                isOpen
+                    ? "bg-[#09090b] py-3"
+                    : scrolled
+                        ? "py-3 glass shadow-lg"
+                        : "py-5 bg-gradient-to-b from-black/60 to-transparent"
             )}
         >
             <div className="container px-4 md:px-6 flex items-center justify-between">
