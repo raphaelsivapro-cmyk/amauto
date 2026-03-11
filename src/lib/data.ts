@@ -64,8 +64,6 @@ export const SERVICES_DATA = [
         slug: "direction-suspension",
         title: "Direction & Suspension",
         category: "reparations",
-        price_from: 150,
-        duration_minutes: 120,
         description: "Remplacement d'amortisseurs, rotules et triangles. Restaurez la tenue de route et le confort d'origine de votre véhicule.",
         image: "/images/service-suspension.png"
     },
@@ -74,8 +72,6 @@ export const SERVICES_DATA = [
         slug: "systeme-injection",
         title: "Système d'Injection",
         category: "entretien",
-        price_from: 180,
-        duration_minutes: 90,
         description: "Nettoyage, contrôle et remplacement d'injecteurs. Optimisez vos performances et réduisez votre consommation de carburant.",
         image: "/images/service-injection.png"
     },
@@ -84,8 +80,6 @@ export const SERVICES_DATA = [
         slug: "systeme-echappement",
         title: "Système d'Échappement",
         category: "reparations",
-        price_from: 120,
-        duration_minutes: 60,
         description: "Remplacement de collecteur d'échappement, sonde lambda et nettoyage FAP (Filtre À Particules).",
         image: "/images/service-exhaust.png"
     }

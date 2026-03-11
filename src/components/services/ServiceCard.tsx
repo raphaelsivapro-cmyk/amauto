@@ -6,8 +6,8 @@ interface ServiceCardProps {
         title: string;
         slug: string;
         description: string;
-        price_from: number;
-        duration_minutes: number;
+        price_from?: number;
+        duration_minutes?: number;
         image?: string;
         category: string;
     };
@@ -46,15 +46,17 @@ export function ServiceCard({ service }: ServiceCardProps) {
 
                 <div className="flex items-center justify-between border-t border-white/5 pt-4">
                     <div className="flex flex-col">
-                        <span className="text-xs text-gray-500 uppercase">À partir de</span>
-                        <span className="text-xl font-bold text-white">{service.price_from}€</span>
+                        <span className="text-xs text-gray-500 uppercase">{service.price_from ? "À partir de" : "Tarif"}</span>
+                        <span className="text-xl font-bold text-white">{service.price_from ? `${service.price_from}€` : "Sur devis"}</span>
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-1 text-xs text-gray-500 bg-white/5 px-2 py-1 rounded">
-                            <Clock className="w-3 h-3" />
-                            {service.duration_minutes} min
-                        </div>
+                        {service.duration_minutes && (
+                            <div className="flex items-center gap-1 text-xs text-gray-500 bg-white/5 px-2 py-1 rounded">
+                                <Clock className="w-3 h-3" />
+                                {service.duration_minutes} min
+                            </div>
+                        )}
                         <div className="w-8 h-8 rounded-full bg-[var(--color-red)] text-white flex items-center justify-center opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
                             <ArrowRight className="w-4 h-4" />
                         </div>

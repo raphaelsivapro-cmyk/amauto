@@ -43,22 +43,24 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                             </h1>
 
                             <div className="flex flex-wrap items-center gap-8">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-12 h-12 rounded-2xl bg-white/5 backdrop-blur-md flex items-center justify-center border border-white/10">
-                                        <Clock className="w-6 h-6 text-[var(--color-red)]" />
+                                {service.duration_minutes && (
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-12 h-12 rounded-2xl bg-white/5 backdrop-blur-md flex items-center justify-center border border-white/10">
+                                            <Clock className="w-6 h-6 text-[var(--color-red)]" />
+                                        </div>
+                                        <div>
+                                            <p className="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Durée estimée</p>
+                                            <p className="text-white font-bold">{service.duration_minutes} min</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p className="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Durée estimée</p>
-                                        <p className="text-white font-bold">{service.duration_minutes} min</p>
-                                    </div>
-                                </div>
+                                )}
                                 <div className="flex items-center gap-3">
                                     <div className="w-12 h-12 rounded-2xl bg-white/5 backdrop-blur-md flex items-center justify-center border border-white/10">
                                         <Gauge className="w-6 h-6 text-[var(--color-red)]" />
                                     </div>
                                     <div>
-                                        <p className="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Investissement</p>
-                                        <p className="text-white font-bold">À partir de {service.price_from}€</p>
+                                        <p className="text-[10px] uppercase font-bold text-gray-500 tracking-widest">{service.price_from ? "Investissement" : "Tarif"}</p>
+                                        <p className="text-white font-bold">{service.price_from ? `À partir de ${service.price_from}€` : "Sur devis"}</p>
                                     </div>
                                 </div>
                             </div>
