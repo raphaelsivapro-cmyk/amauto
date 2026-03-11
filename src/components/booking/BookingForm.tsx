@@ -26,6 +26,23 @@ export function BookingForm() {
         email: ''
     });
 
+    // Get today's date in YYYY-MM-DD format for min date
+    const today = new Date().toISOString().split('T')[0];
+
+    const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const selectedDate = new Date(e.target.value);
+        const day = selectedDate.getDay();
+        // 0 is Sunday, 6 is Saturday
+        if (day === 0 || day === 6) {
+            alert('Le garage est fermé le week-end. Veuillez choisir un jour de semaine.');
+            // Reset the input value
+            e.target.value = '';
+            setFormData({ ...formData, date: '' });
+            return;
+        }
+        setFormData({ ...formData, date: e.target.value });
+    };
+
     const handleSubmit = async () => {
         setStatus('loading');
         await new Promise(r => setTimeout(r, 2000));
@@ -126,14 +143,15 @@ export function BookingForm() {
                                 <label className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3 block">Date</label>
                                 <input
                                     type="date"
+                                    min={today}
                                     className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white focus:border-[var(--color-red)] outline-none transition-colors"
-                                    onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                                    onChange={handleDateChange}
                                 />
                             </div>
                             <div>
                                 <label className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3 block">Heure</label>
                                 <div className="grid grid-cols-3 gap-2">
-                                    {['09:00', '10:00', '11:00', '14:00', '15:00', '16:00'].map(slot => (
+                                    {['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'].map(slot => (
                                         <button
                                             key={slot}
                                             onClick={() => setFormData({ ...formData, slot })}
@@ -162,7 +180,7 @@ export function BookingForm() {
                         <h3 className="text-xl font-bold text-white uppercase tracking-wide">Vos informations</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Nom</label>
+                                <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Nom complet</label>
                                 <input
                                     type="text"
                                     className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white focus:border-[var(--color-red)] outline-none"
