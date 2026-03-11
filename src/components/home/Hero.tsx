@@ -67,25 +67,25 @@ export function Hero() {
 
                 {/* Decorative Divider & Promos - Real centering without breaking vertical align */}
                 <div className="w-full mt-16 pt-8 border-t border-white/[0.06] animate-fade-up flex justify-center" style={{ animationDelay: '450ms' }}>
-                    <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 md:p-8 rounded-3xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20 shadow-[0_0_30px_rgba(220,38,38,0.15)] text-left">
-                        <div className="flex items-center justify-center min-w-16 w-16 h-16 rounded-full bg-[var(--color-red)] text-white font-black text-2xl shadow-glow">
+                    <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-8 p-8 md:p-10 rounded-[2rem] bg-[var(--color-red)]/10 border border-[var(--color-red)]/20 shadow-[0_0_40px_rgba(220,38,38,0.2)] text-left">
+                        <div className="flex items-center justify-center min-w-20 w-20 h-20 rounded-full bg-[var(--color-red)] text-white font-black text-3xl shadow-glow">
                             %
                         </div>
                         <div>
-                            <p className="text-[var(--color-red)] font-black uppercase tracking-tight text-xl md:text-2xl mb-2 text-glow">
+                            <p className="text-[var(--color-red)] font-black uppercase tracking-tight text-2xl md:text-3xl mb-3 text-glow">
                                 Offre du moment : -20%
                             </p>
-                            <p className="text-white text-base md:text-lg font-bold mb-1">
+                            <p className="text-white text-lg md:text-xl font-bold mb-2">
                                 Sur le Kit de distribution
                             </p>
-                            <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-3">
-                                <p className="text-gray-400 text-sm font-medium">
+                            <div className="flex flex-col sm:flex-row sm:items-center gap-6 mt-5">
+                                <p className="text-gray-400 text-base font-medium">
                                     Valable du 11 mars au 11 avril 2026
                                 </p>
                                 <Link href="/prestations/distribution">
-                                    <Button size="sm" className="rounded-full shadow-glow text-xs uppercase tracking-wider font-bold h-9">
+                                    <Button size="md" className="rounded-full shadow-glow text-sm uppercase tracking-wider font-bold h-11 px-6">
                                         Voir l'offre
-                                        <ArrowRight className="ml-2 w-3 h-3" />
+                                        <ArrowRight className="ml-2 w-4 h-4" />
                                     </Button>
                                 </Link>
                             </div>
