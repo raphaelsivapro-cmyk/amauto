@@ -63,34 +63,36 @@ export function Hero() {
                         </Link>
                     </div>
 
-                    {/* Decorative Divider & Promos */}
-                    <div className="mt-20 pt-10 border-t border-white/[0.06] animate-fade-up flex justify-center" style={{ animationDelay: '450ms' }}>
-                        <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 md:p-8 rounded-3xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20 shadow-[0_0_30px_rgba(220,38,38,0.15)] text-left">
-                            <div className="flex items-center justify-center min-w-16 w-16 h-16 rounded-full bg-[var(--color-red)] text-white font-black text-2xl shadow-glow">
-                                %
-                            </div>
-                            <div>
-                                <p className="text-[var(--color-red)] font-black uppercase tracking-tight text-xl md:text-2xl mb-2 text-glow">
-                                    Offre du moment : -20%
+                </div>
+            </div>
+
+            {/* Decorative Divider & Promos - Moved outside max-w-4xl for true centering */}
+            <div className="container relative z-10 px-6 md:px-8 mt-12 pb-20">
+                <div className="pt-10 border-t border-white/[0.06] animate-fade-up flex justify-center" style={{ animationDelay: '450ms' }}>
+                    <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 md:p-8 rounded-3xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20 shadow-[0_0_30px_rgba(220,38,38,0.15)] text-left">
+                        <div className="flex items-center justify-center min-w-16 w-16 h-16 rounded-full bg-[var(--color-red)] text-white font-black text-2xl shadow-glow">
+                            %
+                        </div>
+                        <div>
+                            <p className="text-[var(--color-red)] font-black uppercase tracking-tight text-xl md:text-2xl mb-2 text-glow">
+                                Offre du moment : -20%
+                            </p>
+                            <p className="text-white text-base md:text-lg font-bold mb-1">
+                                Sur le Kit de distribution
+                            </p>
+                            <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-3">
+                                <p className="text-gray-400 text-sm font-medium">
+                                    Valable du 11 mars au 11 avril 2026
                                 </p>
-                                <p className="text-white text-base md:text-lg font-bold mb-1">
-                                    Sur le Kit de distribution
-                                </p>
-                                <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-3">
-                                    <p className="text-gray-400 text-sm font-medium">
-                                        Valable du 11 mars au 11 avril 2026
-                                    </p>
-                                    <Link href="/prestations/distribution">
-                                        <Button size="sm" className="rounded-full shadow-glow text-xs uppercase tracking-wider font-bold h-9">
-                                            Voir l'offre
-                                            <ArrowRight className="ml-2 w-3 h-3" />
-                                        </Button>
-                                    </Link>
-                                </div>
+                                <Link href="/prestations/distribution">
+                                    <Button size="sm" className="rounded-full shadow-glow text-xs uppercase tracking-wider font-bold h-9">
+                                        Voir l'offre
+                                        <ArrowRight className="ml-2 w-3 h-3" />
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
