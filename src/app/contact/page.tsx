@@ -13,19 +13,19 @@ export default function ContactPage() {
                 {/* Background effects */}
                 <div className="absolute top-0 left-1/2 -top-40 -translate-x-1/2 w-[1000px] h-[500px] bg-[var(--color-red)]/20 rounded-[100%] blur-[120px] opacity-50 pointer-events-none" />
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-                
+
                 <div className="container px-4 md:px-6 relative z-10 w-full max-w-5xl">
-                    
+
                     {/* Page Header */}
                     <div className="text-center mb-16">
                         <ScrollReveal>
                             <span className="text-[var(--color-red)] font-black tracking-[0.2em] uppercase text-xs mb-4 block">Nous Contacter</span>
                             <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-black tracking-[-0.03em] mb-6 leading-none text-white">
-                                NOTRE ÉQUIPE<br/>
+                                NOTRE ÉQUIPE<br />
                                 <span className="text-gradient-light">À VOTRE ÉCOUTE</span><span className="text-[var(--color-red)]">.</span>
                             </h1>
                             <p className="text-gray-400 text-lg md:text-xl font-light max-w-2xl mx-auto">
-                                Une urgence mécanique ou un projet d'entretien ? 
+                                Une urgence mécanique ou un projet d'entretien ?
                                 Retrouvez-nous directement à l'atelier ou appelez-nous.
                             </p>
                         </ScrollReveal>
@@ -33,16 +33,16 @@ export default function ContactPage() {
 
                     {/* Info Cards Row */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        
+
                         <ScrollReveal delay={100} className="h-full">
                             <div className="p-8 rounded-3xl glass border border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors h-full flex flex-col justify-between">
                                 <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                                     <Phone className="w-32 h-32" />
                                 </div>
                                 <div>
-                                    <div className="w-14 h-14 rounded-2xl bg-[var(--color-red)]/10 flex items-center justify-center mb-6 text-[var(--color-red)] border border-[var(--color-red)]/20">
-                                        <Phone className="w-6 h-6" />
-                                    </div>
+                                    <a href="tel:0634612212" className="w-14 h-14 rounded-2xl bg-[var(--color-red)]/10 flex items-center justify-center mb-6 text-[var(--color-red)] border border-[var(--color-red)]/20 hover:bg-[var(--color-red)] hover:text-white transition-all duration-300 cursor-pointer group/icon">
+                                        <Phone className="w-6 h-6 group-hover/icon:scale-110 transition-transform" />
+                                    </a>
                                     <h3 className="text-white font-bold text-xl mb-2">Appelez-nous</h3>
                                     <p className="text-gray-400 mb-6 text-sm">Pour les prises de rendez-vous immédiates.</p>
                                 </div>
@@ -82,23 +82,23 @@ export default function ContactPage() {
                                     <MapPin className="w-32 h-32" />
                                 </div>
                                 <div>
-                                    <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 text-white border border-white/10">
-                                        <MapPin className="w-6 h-6" />
-                                    </div>
+                                    <a href="https://maps.google.com/?q=161+bis+rue+Emile+Combes,+33270+Floirac" target="_blank" rel="noreferrer" className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 text-white border border-white/10 hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-pointer group/icon">
+                                        <MapPin className="w-6 h-6 group-hover/icon:scale-110 transition-transform" />
+                                    </a>
                                     <h3 className="text-white font-bold text-xl mb-2">L'Atelier</h3>
                                     <p className="text-gray-400 mb-6 text-sm">161 bis rue Emile Combes, 33270 Floirac</p>
                                 </div>
-                                <a 
-                                    href="https://maps.google.com/?q=161+bis+rue+Emile+Combes,+33270+Floirac" 
-                                    target="_blank" 
-                                    rel="noreferrer" 
+                                <a
+                                    href="https://maps.google.com/?q=161+bis+rue+Emile+Combes,+33270+Floirac"
+                                    target="_blank"
+                                    rel="noreferrer"
                                     className="inline-block text-lg font-bold text-white hover:text-[var(--color-red)] transition-colors mt-auto underline underline-offset-4 decoration-white/20 hover:decoration-[var(--color-red)]"
                                 >
                                     Itinéraire Google Maps →
                                 </a>
                             </div>
                         </ScrollReveal>
-                        
+
                     </div>
                 </div>
             </main>
