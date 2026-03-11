@@ -15,7 +15,7 @@ export function QuoteForm() {
         name: '',
         email: '',
         phone: '',
-        vehicle_model: '',
+        vehicle_plate: '',
         service_type: servicePreselected || '',
         message: ''
     });
@@ -86,14 +86,14 @@ export function QuoteForm() {
                     />
                 </div>
                 <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Modèle Véhicule</label>
+                    <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Immatriculation</label>
                     <input
                         type="text"
                         required
-                        className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white placeholder:text-gray-600 focus:border-[var(--color-red)] focus:ring-1 focus:ring-[var(--color-red)] outline-none transition-all"
-                        placeholder="Ex: Peugeot 308, BMW Série 3..."
-                        value={formData.vehicle_model}
-                        onChange={e => setFormData({ ...formData, vehicle_model: e.target.value })}
+                        className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white placeholder:text-gray-600 focus:border-[var(--color-red)] uppercase focus:ring-1 focus:ring-[var(--color-red)] outline-none transition-all"
+                        placeholder="AB-123-CD"
+                        value={formData.vehicle_plate}
+                        onChange={e => setFormData({ ...formData, vehicle_plate: e.target.value.toUpperCase() })}
                     />
                 </div>
             </div>
@@ -106,26 +106,26 @@ export function QuoteForm() {
                     onChange={e => setFormData({ ...formData, service_type: e.target.value })}
                 >
                     <option value="" className="text-black">Sélectionnez une prestation...</option>
-                    <option value="revision" className="text-black">Révision / Vidange</option>
-                    <option value="freinage" className="text-black">Freinage</option>
-                    <option value="pneus" className="text-black">Pneumatiques</option>
-                    <option value="distribution" className="text-black">Distribution</option>
-                    <option value="embrayage" className="text-black">Embrayage</option>
-                    <option value="echappement" className="text-black">Échappement</option>
-                    <option value="clim" className="text-black">Climatisation</option>
-                    <option value="amortisseurs" className="text-black">Amortisseurs</option>
-                    <option value="batterie" className="text-black">Batterie / Alternateur</option>
-                    <option value="diag" className="text-black">Diagnostic Électronique</option>
+                    <option value="revision-vidange" className="text-black">Révision & Vidange</option>
+                    <option value="freinage" className="text-black">Freinage (Plaquettes / Disques)</option>
+                    <option value="pneumatiques" className="text-black">Pneumatiques (Montage / Équilibrage)</option>
+                    <option value="distribution" className="text-black">Kit de distribution & accessoires</option>
+                    <option value="embrayage" className="text-black">Kit Embrayage & Transmission</option>
+                    <option value="echappement" className="text-black">Échappement & Dépollution</option>
+                    <option value="suspension" className="text-black">Suspension & Direction</option>
+                    <option value="injection" className="text-black">Injection & Moteur</option>
+                    <option value="diagnostic" className="text-black">Diagnostic Électronique</option>
                     <option value="autre" className="text-black">Autre demande</option>
                 </select>
             </div>
 
             <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Message (Facultatif)</label>
+                <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Raison du RDV / Problème rencontré</label>
                 <textarea
                     rows={4}
+                    required
                     className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white placeholder:text-gray-600 focus:border-[var(--color-red)] focus:ring-1 focus:ring-[var(--color-red)] outline-none transition-all"
-                    placeholder="Précisions sur votre demande..."
+                    placeholder="Décrivez les symptômes remarqués, le bruit entendu, ou la raison de votre visite..."
                     value={formData.message}
                     onChange={e => setFormData({ ...formData, message: e.target.value })}
                 />

@@ -19,7 +19,8 @@ export function BookingForm() {
         service: '',
         date: '',
         slot: '',
-        vehicle: '',
+        vehicle_plate: '',
+        problem_desc: '',
         name: '',
         phone: '',
         email: ''
@@ -85,7 +86,18 @@ export function BookingForm() {
                     <div className="space-y-8 animate-fade-up">
                         <h3 className="text-xl font-bold text-white uppercase tracking-wide">Sélectionnez votre prestation</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                            {['Révision', 'Freinage', 'Pneumatiques', 'Distribution', 'Embrayage', 'Échappement', 'Climatisation', 'Amortisseurs', 'Batterie / Alternateur', 'Diagnostic', 'Autre'].map((service) => (
+                            {[
+                                'Révision & Vidange',
+                                'Freinage',
+                                'Pneumatiques',
+                                'Kit de distribution & accessoires',
+                                'Kit Embrayage & Transmission',
+                                'Échappement & Dépollution',
+                                'Suspension & Direction',
+                                'Injection & Moteur',
+                                'Diagnostic Électronique',
+                                'Autre demande'
+                            ].map((service) => (
                                 <button
                                     key={service}
                                     onClick={() => setFormData({ ...formData, service })}
@@ -159,12 +171,12 @@ export function BookingForm() {
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Véhicule</label>
+                                <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Immatriculation</label>
                                 <input
                                     type="text"
-                                    className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white focus:border-[var(--color-red)] outline-none"
-                                    placeholder="Modèle"
-                                    onChange={(e) => setFormData({ ...formData, vehicle: e.target.value })}
+                                    className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white focus:border-[var(--color-red)] uppercase outline-none"
+                                    placeholder="AB-123-CD"
+                                    onChange={(e) => setFormData({ ...formData, vehicle_plate: e.target.value.toUpperCase() })}
                                 />
                             </div>
 
@@ -189,9 +201,20 @@ export function BookingForm() {
                             </div>
                         </div>
 
-                        <div className="flex justify-between pt-8 border-t border-white/5">
+                        <div className="space-y-2 mt-6">
+                            <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Raison du RDV / Problème rencontré</label>
+                            <textarea
+                                rows={4}
+                                required
+                                className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white placeholder:text-gray-600 focus:border-[var(--color-red)] outline-none"
+                                placeholder="Décrivez les symptômes remarqués, le bruit entendu, ou la raison de votre visite..."
+                                onChange={(e) => setFormData({ ...formData, problem_desc: e.target.value })}
+                            />
+                        </div>
+
+                        <div className="flex justify-between pt-8 border-t border-white/5 mt-8">
                             <Button variant="ghost" onClick={() => setStep(2)} className="text-gray-400 hover:text-white">Retour</Button>
-                            <Button onClick={handleSubmit} disabled={!formData.name || !formData.email || !formData.phone}>
+                            <Button onClick={handleSubmit} disabled={!formData.name || !formData.email || !formData.phone || !formData.vehicle_plate || !formData.problem_desc}>
                                 Confirmer
                             </Button>
                         </div>
