@@ -6,7 +6,7 @@ import { ArrowRight, Star, Car, Award } from "lucide-react";
 
 export function Hero() {
     return (
-        <section className="relative min-h-[100svh] w-full flex flex-col justify-center overflow-hidden mesh-gradient pt-32 pb-16 md:py-32">
+        <section className="relative min-h-[100svh] w-full flex flex-col justify-center overflow-hidden mesh-gradient pt-32 pb-16 md:pt-48 md:pb-16">
             {/* Cinematic Video Background */}
             <div className="absolute inset-0 z-0">
                 <video
@@ -62,13 +62,11 @@ export function Hero() {
                             </Button>
                         </Link>
                     </div>
-
                 </div>
-            </div>
 
-            {/* Decorative Divider & Promos - Moved outside max-w-4xl for true centering */}
-            <div className="container mx-auto relative z-10 px-6 md:px-8 mt-12 pb-20">
-                <div className="pt-10 border-t border-white/[0.06] animate-fade-up flex justify-center" style={{ animationDelay: '450ms' }}>
+
+                {/* Decorative Divider & Promos - Real centering without breaking vertical align */}
+                <div className="w-full mt-16 pt-8 border-t border-white/[0.06] animate-fade-up flex justify-center" style={{ animationDelay: '450ms' }}>
                     <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 md:p-8 rounded-3xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20 shadow-[0_0_30px_rgba(220,38,38,0.15)] text-left">
                         <div className="flex items-center justify-center min-w-16 w-16 h-16 rounded-full bg-[var(--color-red)] text-white font-black text-2xl shadow-glow">
                             %
