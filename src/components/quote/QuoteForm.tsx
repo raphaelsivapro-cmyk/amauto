@@ -14,7 +14,7 @@ const SERVICES = [
     { id: 'pneumatiques', label: 'Pneumatiques (Montage / Équilibrage)' },
     { id: 'distribution', label: 'Kit de distribution & accessoires' },
     { id: 'embrayage', label: 'Kit Embrayage & Transmission' },
-    { id: 'echappement', label: 'Échappement & Dépollution' },
+    { id: 'echappement', label: 'Système d\'Échappement' },
     { id: 'suspension', label: 'Suspension & Direction' },
     { id: 'injection', label: 'Injection & Moteur' },
     { id: 'diagnostic', label: 'Diagnostic Électronique' },

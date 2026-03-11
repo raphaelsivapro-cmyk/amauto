@@ -102,7 +102,7 @@ export function BookingForm() {
                                 'Pneumatiques',
                                 'Kit de distribution & accessoires',
                                 'Kit Embrayage & Transmission',
-                                'Échappement & Dépollution',
+                                'Système d\'Échappement',
                                 'Suspension & Direction',
                                 'Injection & Moteur',
                                 'Diagnostic Électronique',
