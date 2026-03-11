@@ -2,7 +2,7 @@ export const SERVICES_DATA = [
     {
         id: "1",
         slug: "montage-pneus",
-        title: "Montage, Équilibrage & Réparation Crevaison",
+        title: "Montage & Équilibrage",
         category: "pneumatiques",
         price_from: 15,
         duration_minutes: 30,
