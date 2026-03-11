@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail, Facebook, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 export function Footer() {
     return (
@@ -32,14 +32,6 @@ export function Footer() {
                         <p className="text-gray-500 text-xs leading-relaxed max-w-[220px]">
                             L&apos;excellence automobile à Floirac. Entretien, réparation et expertise technique.
                         </p>
-                        <div className="flex gap-2">
-                            <a href="#" className="w-8 h-8 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] flex items-center justify-center transition-colors">
-                                <Facebook className="w-3.5 h-3.5 text-gray-400" />
-                            </a>
-                            <a href="#" className="w-8 h-8 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] flex items-center justify-center transition-colors">
-                                <Instagram className="w-3.5 h-3.5 text-gray-400" />
-                            </a>
-                        </div>
                     </div>
 
                     {/* Navigation — 2 cols */}
