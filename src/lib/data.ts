@@ -40,7 +40,7 @@ export const SERVICES_DATA = [
     {
         id: "4",
         slug: "distribution",
-        title: "Kit Distribution",
+        title: "Kit de distribution & kit d'accessoires",
         category: "mecanique",
         price_from: 450,
         duration_minutes: 240,
