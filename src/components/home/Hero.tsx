@@ -75,7 +75,7 @@ export function Hero() {
                                     Offre du moment : -20%
                                 </p>
                                 <p className="text-white text-base md:text-lg font-bold mb-1">
-                                    Sur le Kit de distribution & kit d'accessoires
+                                    Uniquement sur le Kit de distribution
                                 </p>
                                 <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-3">
                                     <p className="text-gray-400 text-sm font-medium">
