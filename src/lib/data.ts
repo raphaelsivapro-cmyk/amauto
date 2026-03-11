@@ -2,11 +2,11 @@ export const SERVICES_DATA = [
     {
         id: "1",
         slug: "montage-pneus",
-        title: "Montage & Équilibrage Pneus",
+        title: "Montage, Équilibrage & Réparation Crevaison",
         category: "pneumatiques",
         price_from: 15,
         duration_minutes: 30,
-        description: "Montage, valvage et équilibrage de vos pneumatiques. Nous travaillons sur jantes tôle et alu avec le plus grand soin.",
+        description: "Montage, valvage et équilibrage de vos pneumatiques. Nous prenons également en charge la réparation sécurisée de vos pneus crevés.",
         image: "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&q=80&w=1000"
     },
     {
