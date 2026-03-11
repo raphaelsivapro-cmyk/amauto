@@ -125,7 +125,7 @@ export function QuoteForm() {
                     rows={4}
                     required
                     className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white placeholder:text-gray-600 focus:border-[var(--color-red)] focus:ring-1 focus:ring-[var(--color-red)] outline-none transition-all relative z-10"
-                    placeholder="Décrivez les symptômes remarqués, le bruit entendu, ou la raison de votre visite..."
+                    placeholder="Ex: Pièces spécifiques souhaitées, détails de l'entretien..."
                     value={formData.message}
                     onChange={e => setFormData({ ...formData, message: e.target.value })}
                 />
