@@ -72,9 +72,9 @@ export function Header() {
                         </div>
                         <span className="hidden xl:inline text-sm">06 34 61 22 12</span>
                     </a>
-                    <Link href="/rendez-vous">
+                    <Link href="/devis">
                         <Button size="sm" className="shadow-glow">
-                            Rendez-vous
+                            Devis sur mesure
                         </Button>
                     </Link>
                 </div>
@@ -108,8 +108,8 @@ export function Header() {
                             </Link>
                         ))}
                         <div className="mt-4 pt-4 border-t border-white/10 grid grid-cols-2 gap-3">
-                            <Link href="/rendez-vous" onClick={() => setIsOpen(false)}>
-                                <Button className="w-full justify-center">RDV</Button>
+                            <Link href="/devis" onClick={() => setIsOpen(false)}>
+                                <Button className="w-full justify-center text-[13px]">Devis sur mesure</Button>
                             </Link>
                             <a href="tel:0634612212">
                                 <Button variant="outline" className="w-full justify-center border-white/10 text-white hover:bg-white/10">Appeler</Button>
