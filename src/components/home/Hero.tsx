@@ -14,6 +14,7 @@ export function Hero() {
                     loop
                     muted
                     playsInline
+                    poster="/images/hero.png"
                     className="w-full h-full object-cover opacity-[0.85]"
                 >
                     <source
