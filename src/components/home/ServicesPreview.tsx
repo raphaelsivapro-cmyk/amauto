@@ -7,8 +7,8 @@ import { SERVICES_DATA } from "@/lib/data";
 import { ServiceCard } from "@/components/services/ServiceCard";
 
 export function ServicesPreview() {
-    // Show all 6 services on the homepage
-    const services = SERVICES_DATA.slice(0, 6);
+    // Show all services on the homepage
+    const services = SERVICES_DATA.slice(0, 9);
 
     return (
         <Section background="charcoal" className="py-32 relative overflow-hidden mesh-gradient">
