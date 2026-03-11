@@ -14,7 +14,7 @@ export function Hero() {
                     loop
                     muted
                     playsInline
-                    poster="/images/hero.png"
+                    poster="/images/hero-video-poster.jpg"
                     className="w-full h-full object-cover opacity-[0.85]"
                 >
                     <source
