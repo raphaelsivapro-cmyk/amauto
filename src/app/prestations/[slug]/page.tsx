@@ -20,7 +20,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <Header />
             <main className="min-h-screen bg-[#09090b]">
                 {/* Hero section specifically for details */}
-                <div className="relative h-[60vh] flex items-center overflow-hidden mesh-gradient">
+                <div className="relative min-h-[60vh] py-32 flex items-center overflow-hidden mesh-gradient">
                     <div
                         className="absolute inset-0 z-0 opacity-40 bg-cover bg-center grayscale-[0.2]"
                         style={{ backgroundImage: `url(${service.image})` }}
