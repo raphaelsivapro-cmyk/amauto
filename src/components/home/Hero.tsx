@@ -64,8 +64,8 @@ export function Hero() {
                     </div>
 
                     {/* Decorative Divider & Promos */}
-                    <div className="mt-20 pt-10 border-t border-white/[0.06] animate-fade-up" style={{ animationDelay: '450ms' }}>
-                        <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 md:p-8 rounded-3xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20 shadow-[0_0_30px_rgba(220,38,38,0.15)]">
+                    <div className="mt-20 pt-10 border-t border-white/[0.06] animate-fade-up flex justify-center" style={{ animationDelay: '450ms' }}>
+                        <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 md:p-8 rounded-3xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20 shadow-[0_0_30px_rgba(220,38,38,0.15)] text-left">
                             <div className="flex items-center justify-center min-w-16 w-16 h-16 rounded-full bg-[var(--color-red)] text-white font-black text-2xl shadow-glow">
                                 %
                             </div>
