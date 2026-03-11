@@ -79,9 +79,9 @@ export function BookingForm() {
                 <div className="w-20 h-20 bg-[var(--color-red)] rounded-full flex items-center justify-center mx-auto mb-8 shadow-glow">
                     <CheckCircle2 className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-4 uppercase tracking-tight">Rendez-vous Confirmé</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 uppercase tracking-tight">Votre demande est<br />bien prise en compte</h3>
                 <p className="text-gray-400 mb-8 max-w-md mx-auto">
-                    Nous vous contacterons très prochainement pour confirmer votre rendez-vous.
+                    Notre équipe va étudier votre demande et vous recontactera très prochainement pour confirmer la date et l'heure de votre rendez-vous.
                 </p>
                 <Button onClick={() => window.location.href = '/'} variant="outline">
                     Retour
