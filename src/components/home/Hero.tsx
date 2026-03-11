@@ -53,7 +53,7 @@ export function Hero() {
                     <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '300ms' }}>
                         <Link href="/devis">
                             <Button size="xl" className="w-full sm:w-auto group px-10 rounded-full h-16 shadow-glow">
-                                Devis Flash
+                                Devis sur mesure
                                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                             </Button>
                         </Link>
