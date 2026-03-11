@@ -58,6 +58,36 @@ export const SERVICES_DATA = [
         duration_minutes: 360,
         description: "Remplacement complet du kit d'embrayage et de la transmission. Retrouvez des passages de vitesse fluides et une motricité optimale.",
         image: "/images/clutch.png"
+    },
+    {
+        id: "7",
+        slug: "direction-suspension",
+        title: "Direction & Suspension",
+        category: "reparations",
+        price_from: 150,
+        duration_minutes: 120,
+        description: "Remplacement d'amortisseurs, rotules et triangles. Restaurez la tenue de route et le confort d'origine de votre véhicule.",
+        image: "/images/service-suspension.png"
+    },
+    {
+        id: "8",
+        slug: "systeme-injection",
+        title: "Système d'Injection",
+        category: "entretien",
+        price_from: 180,
+        duration_minutes: 90,
+        description: "Nettoyage, contrôle et remplacement d'injecteurs. Optimisez vos performances et réduisez votre consommation de carburant.",
+        image: "/images/service-injection.png"
+    },
+    {
+        id: "9",
+        slug: "systeme-echappement",
+        title: "Système d'Échappement",
+        category: "reparations",
+        price_from: 120,
+        duration_minutes: 60,
+        description: "Remplacement de silencieux, ligne complète ou catalyseur. Évitez les contre-visites au contrôle technique et respectez les normes de pollution.",
+        image: "/images/service-exhaust.png"
     }
 ];
 
