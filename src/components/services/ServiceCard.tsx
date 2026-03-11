@@ -7,6 +7,8 @@ interface ServiceCardProps {
         slug: string;
         description: string;
         price_from?: number;
+        old_price?: number;
+        promo_badge?: string;
         duration_minutes?: number;
         image?: string;
         category: string;
@@ -34,6 +36,11 @@ export function ServiceCard({ service }: ServiceCardProps) {
                 <div className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-xs font-bold text-white uppercase tracking-wider border border-white/10">
                     {service.category}
                 </div>
+                {service.promo_badge && (
+                    <div className="absolute top-4 right-4 px-3 py-1 bg-[var(--color-red)] text-white font-black rounded-full shadow-glow text-xs uppercase tracking-widest animate-pulse">
+                        {service.promo_badge}
+                    </div>
+                )}
             </div>
 
             <div className="p-6">
@@ -47,7 +54,12 @@ export function ServiceCard({ service }: ServiceCardProps) {
                 <div className="flex items-center justify-between border-t border-white/5 pt-4">
                     <div className="flex flex-col">
                         <span className="text-xs text-gray-500 uppercase">{service.price_from ? "À partir de" : "Tarif"}</span>
-                        <span className="text-xl font-bold text-white">{service.price_from ? `${service.price_from}€` : "Sur devis"}</span>
+                        <div className="flex items-center gap-2">
+                            <span className="text-xl font-bold text-white">{service.price_from ? `${service.price_from}€` : "Sur devis"}</span>
+                            {service.old_price && (
+                                <span className="text-sm text-gray-500 line-through decoration-[var(--color-red)]">{service.old_price}€</span>
+                            )}
+                        </div>
                     </div>
 
                     <div className="flex items-center gap-4">
