@@ -14,7 +14,7 @@ export default function ContactPage() {
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
         setStatus('loading');
-        
+
         const formData = new FormData(event.currentTarget);
         formData.append("access_key", "551b3d41-b012-4e86-8c60-9059c58bb316");
         formData.append("subject", "Nouvelle demande de contact depuis le site web");
@@ -44,26 +44,26 @@ export default function ContactPage() {
                 {/* Background effects */}
                 <div className="absolute top-0 left-1/2 -top-40 -translate-x-1/2 w-[1000px] h-[500px] bg-[var(--color-red)]/20 rounded-[100%] blur-[120px] opacity-50 pointer-events-none" />
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-                
+
                 <div className="container px-4 md:px-6 relative z-10">
-                    
+
                     {/* Page Header */}
                     <div className="text-center mb-20 max-w-3xl mx-auto">
                         <ScrollReveal>
                             <span className="text-[var(--color-red)] font-black tracking-[0.2em] uppercase text-xs mb-4 block">Nous Contacter</span>
                             <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-black tracking-[-0.03em] mb-6 leading-none text-white">
-                                NOTRE ÉQUIPE<br/>
+                                NOTRE ÉQUIPE<br />
                                 <span className="text-gradient-light">À VOTRE ÉCOUTE</span><span className="text-[var(--color-red)]">.</span>
                             </h1>
                             <p className="text-gray-400 text-lg md:text-xl font-light">
-                                Une urgence mécanique, un projet d'entretien ou une simple question ? 
+                                Une urgence mécanique, un projet d'entretien ou une simple question ?
                                 Remplissez le formulaire ci-dessous ou appelez-nous directement.
                             </p>
                         </ScrollReveal>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-                        
+
                         {/* Info Cards Column */}
                         <div className="lg:col-span-4 flex flex-col gap-6">
                             <ScrollReveal delay={100}>
@@ -106,10 +106,10 @@ export default function ContactPage() {
                         <div className="lg:col-span-8">
                             <ScrollReveal delay={300} className="h-full">
                                 <div className="p-8 md:p-12 rounded-3xl bg-[#0a0a0c] border border-white/5 shadow-2xl h-full relative overflow-hidden">
-                                     <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-red)]/10 rounded-full blur-[100px] pointer-events-none" />
-                                    
+                                    <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-red)]/10 rounded-full blur-[100px] pointer-events-none" />
+
                                     <h2 className="text-2xl font-bold text-white mb-8">Envoyez-nous un message</h2>
-                                    
+
                                     {status === 'success' ? (
                                         <div className="flex flex-col items-center justify-center text-center h-[500px] animate-fade-in">
                                             <div className="w-20 h-20 bg-[var(--color-red)]/10 rounded-full flex items-center justify-center mb-6 border border-[var(--color-red)]/20">
@@ -123,51 +123,51 @@ export default function ContactPage() {
                                         </div>
                                     ) : (
                                         <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
-                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                                 <div className="space-y-2">
-                                                    <label htmlFor="name" className="text-sm font-medium text-gray-300">Nom complet</label>
-                                                    <input 
-                                                        type="text" 
-                                                        id="name" 
-                                                        name="name" 
-                                                        required 
-                                                        className="w-full h-14 bg-white/5 border border-white/10 rounded-xl px-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-[var(--color-red)] focus:bg-white/10 transition-all"
+                                                    <label htmlFor="name" className="text-sm font-bold tracking-wide text-white uppercase ml-1">Nom complet</label>
+                                                    <input
+                                                        type="text"
+                                                        id="name"
+                                                        name="name"
+                                                        required
+                                                        className="w-full h-14 bg-white/5 border border-white/5 rounded-2xl px-5 text-lg text-white placeholder:text-gray-600 focus:outline-none focus:border-[var(--color-red)]/50 focus:bg-white/10 transition-all font-medium"
                                                         placeholder="Jean Dupont"
                                                     />
                                                 </div>
                                                 <div className="space-y-2">
-                                                    <label htmlFor="phone" className="text-sm font-medium text-gray-300">Téléphone</label>
-                                                    <input 
-                                                        type="tel" 
-                                                        id="phone" 
-                                                        name="phone" 
-                                                        required 
-                                                        className="w-full h-14 bg-white/5 border border-white/10 rounded-xl px-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-[var(--color-red)] focus:bg-white/10 transition-all"
+                                                    <label htmlFor="phone" className="text-sm font-bold tracking-wide text-white uppercase ml-1">Téléphone</label>
+                                                    <input
+                                                        type="tel"
+                                                        id="phone"
+                                                        name="phone"
+                                                        required
+                                                        className="w-full h-14 bg-white/5 border border-white/5 rounded-2xl px-5 text-lg text-white placeholder:text-gray-600 focus:outline-none focus:border-[var(--color-red)]/50 focus:bg-white/10 transition-all font-medium"
                                                         placeholder="06 12 34 56 78"
                                                     />
                                                 </div>
                                             </div>
-                                            
+
                                             <div className="space-y-2">
-                                                <label htmlFor="email" className="text-sm font-medium text-gray-300">Email</label>
-                                                <input 
-                                                    type="email" 
-                                                    id="email" 
-                                                    name="email" 
-                                                    required 
-                                                    className="w-full h-14 bg-white/5 border border-white/10 rounded-xl px-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-[var(--color-red)] focus:bg-white/10 transition-all"
+                                                <label htmlFor="email" className="text-sm font-bold tracking-wide text-white uppercase ml-1">Email</label>
+                                                <input
+                                                    type="email"
+                                                    id="email"
+                                                    name="email"
+                                                    required
+                                                    className="w-full h-14 bg-white/5 border border-white/5 rounded-2xl px-5 text-lg text-white placeholder:text-gray-600 focus:outline-none focus:border-[var(--color-red)]/50 focus:bg-white/10 transition-all font-medium"
                                                     placeholder="jean.dupont@email.com"
                                                 />
                                             </div>
 
                                             <div className="space-y-2">
-                                                <label htmlFor="message" className="text-sm font-medium text-gray-300">Votre message</label>
-                                                <textarea 
-                                                    id="message" 
-                                                    name="message" 
-                                                    required 
+                                                <label htmlFor="message" className="text-sm font-bold tracking-wide text-white uppercase ml-1">Votre message</label>
+                                                <textarea
+                                                    id="message"
+                                                    name="message"
+                                                    required
                                                     rows={5}
-                                                    className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-[var(--color-red)] focus:bg-white/10 transition-all resize-none"
+                                                    className="w-full bg-white/5 border border-white/5 rounded-2xl p-5 text-lg text-white placeholder:text-gray-600 focus:outline-none focus:border-[var(--color-red)]/50 focus:bg-white/10 transition-all resize-none font-medium"
                                                     placeholder="Décrivez votre besoin (révision, problème moteur, devis...)"
                                                 />
                                             </div>
@@ -179,9 +179,9 @@ export default function ContactPage() {
                                                 </div>
                                             )}
 
-                                            <Button 
-                                                type="submit" 
-                                                size="xl" 
+                                            <Button
+                                                type="submit"
+                                                size="xl"
                                                 className="w-full shadow-glow !h-14 font-bold"
                                                 disabled={status === 'loading'}
                                             >
@@ -203,15 +203,15 @@ export default function ContactPage() {
                         <div className="mt-8 rounded-3xl overflow-hidden glass border border-white/5 relative group">
                             <div className="absolute top-6 left-6 z-20 glass p-6 rounded-2xl border border-white/10 shadow-2xl max-w-sm hidden md:block backdrop-blur-xl bg-black/40">
                                 <h3 className="text-white font-bold text-xl mb-2 flex items-center gap-2">
-                                    <MapPin className="text-[var(--color-red)] w-5 h-5" /> 
+                                    <MapPin className="text-[var(--color-red)] w-5 h-5" />
                                     L'Atelier AM AUTO
                                 </h3>
                                 <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                                     Situé au cœur de Floirac, notre atelier est facilement accessible et dispose d'un parking réservé à notre clientèle.
                                 </p>
-                                <a 
-                                    href="https://maps.google.com/?q=161+bis+rue+Emile+Combes,+33270+Floirac" 
-                                    target="_blank" 
+                                <a
+                                    href="https://maps.google.com/?q=161+bis+rue+Emile+Combes,+33270+Floirac"
+                                    target="_blank"
                                     rel="noreferrer"
                                     className="flex items-center justify-center gap-2 w-full py-3 bg-white text-black font-semibold rounded-xl hover:bg-gray-200 transition-colors"
                                 >
@@ -231,12 +231,12 @@ export default function ContactPage() {
                                     className="w-full h-full object-cover"
                                 ></iframe>
                             </div>
-                            
+
                             {/* Mobile Maps Button */}
                             <div className="md:hidden p-4 bg-[#0a0a0c] border-t border-white/5 flex justify-center z-20 relative">
-                                 <a 
-                                    href="https://maps.google.com/?q=161+bis+rue+Emile+Combes,+33270+Floirac" 
-                                    target="_blank" 
+                                <a
+                                    href="https://maps.google.com/?q=161+bis+rue+Emile+Combes,+33270+Floirac"
+                                    target="_blank"
                                     rel="noreferrer"
                                     className="flex items-center justify-center gap-2 w-full py-3 glass border border-white/10 text-white font-semibold rounded-xl"
                                 >
