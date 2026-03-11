@@ -38,12 +38,19 @@ export function ServiceCard({ service }: ServiceCardProps) {
                     {service.category}
                 </div>
                 {service.promo_badge && (
-                    <div className="absolute top-4 right-4 flex flex-col items-end gap-1">
-                        <div className="px-3 py-1 bg-[var(--color-red)] text-white font-black rounded-full shadow-glow text-sm uppercase tracking-widest animate-pulse">
+                    <div className="absolute top-4 right-4 flex flex-col items-end gap-1.5 max-w-[60%]">
+                        <div className="px-3 py-1 bg-[var(--color-red)] text-white font-black rounded-full shadow-glow text-sm uppercase tracking-widest animate-pulse inline-block">
                             {service.promo_badge}
                         </div>
-                        <div className="px-2 py-0.5 bg-black/60 backdrop-blur-md rounded-full text-[10px] font-bold text-white uppercase tracking-wider border border-white/10">
-                            Offre du moment
+                        <div className="px-2.5 py-1.5 bg-black/80 backdrop-blur-md rounded-xl text-right border border-[var(--color-red)]/30 shadow-lg">
+                            <p className="text-[9px] font-black text-[var(--color-red)] uppercase tracking-wider mb-0.5">
+                                Offre du moment
+                            </p>
+                            {service.promo_desc && (
+                                <p className="text-[10px] text-white/90 font-medium leading-tight">
+                                    {service.promo_desc}
+                                </p>
+                            )}
                         </div>
                     </div>
                 )}
