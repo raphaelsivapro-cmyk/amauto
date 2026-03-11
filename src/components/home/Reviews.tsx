@@ -6,78 +6,11 @@ import { ScrollReveal } from "@/hooks/useScrollReveal";
 import { useEffect } from "react";
 
 export function Reviews() {
-    useEffect(() => {
-        // Prevent layout shift/flashing by injecting CSS into the shadow DOM directly before showing
-        const checkWidget = () => {
-            const widgetContainers = document.querySelectorAll('div[class*="elfsight-app"]');
-            let foundShadowRoot = false;
-
-            widgetContainers.forEach(container => {
-                const hosts = container.querySelectorAll('*');
-                hosts.forEach(host => {
-                    if (host.shadowRoot) {
-                        foundShadowRoot = true;
-                        if (!host.shadowRoot.querySelector('#hide-elfsight-badge')) {
-                            const style = document.createElement('style');
-                            style.id = 'hide-elfsight-badge';
-                            style.innerHTML = `
-                                a[href*="elfsight"], 
-                                .eapps-link,
-                                [class*="Badge__Container"],
-                                [class*="WidgetBackground__Container"] a { 
-                                    display: none !important; 
-                                    opacity: 0 !important;
-                                    pointer-events: none !important;
-                                }
-                            `;
-                            host.shadowRoot.appendChild(style);
-                        }
-                    }
-                });
-
-                // Add class to make it visible only after shadow DOM is processed
-                if (foundShadowRoot && !container.classList.contains('widget-ready')) {
-                    container.classList.add('widget-ready');
-                }
-            });
-
-            if (foundShadowRoot) {
-                // Return true to clear the interval
-                return true;
-            }
-            return false;
-        };
-
-        const interval = setInterval(() => {
-            if (checkWidget()) {
-                clearInterval(interval);
-            }
-        }, 50);
-
-        // Fallback: show widget anyway after 3 seconds
-        const timeout = setTimeout(() => {
-            document.querySelectorAll('div[class*="elfsight-app"]').forEach(el => el.classList.add('widget-ready'));
-        }, 3000);
-
-        return () => {
-            clearInterval(interval);
-            clearTimeout(timeout);
-        };
-    }, []);
-
     return (
         <Section background="charcoal" className="py-28 relative overflow-hidden">
             <style dangerouslySetInnerHTML={{
                 __html: `
-                .elfsight-app-861e8a1e-f281-417f-b963-ccf72903d836 {
-                    visibility: hidden;
-                    opacity: 0;
-                }
-                .elfsight-app-861e8a1e-f281-417f-b963-ccf72903d836.widget-ready {
-                    visibility: visible;
-                    opacity: 1;
-                    transition: opacity 1s ease-in-out;
-                }
+                /* Attempt to hide Elfsight branding links globally without hiding the widget */
                 a[href*="elfsight"], .eapps-link { display: none !important; }
             `}} />
 
@@ -105,8 +38,8 @@ export function Reviews() {
             <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-0">
                 <ScrollReveal delay={200}>
                     {/* Elfsight Google Reviews Widget */}
+                    <script src="https://static.elfsight.com/platform/platform.js" async></script>
                     <div className="elfsight-app-861e8a1e-f281-417f-b963-ccf72903d836" data-elfsight-app-lazy></div>
-                    <script src="https://elfsightcdn.com/platform.js" async></script>
                 </ScrollReveal>
             </div>
         </Section>
