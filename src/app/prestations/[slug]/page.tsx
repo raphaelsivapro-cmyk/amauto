@@ -43,16 +43,16 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                             </h1>
 
                             {service.promo_badge && (
-                                <div className="mb-10 inline-flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 rounded-3xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20 shadow-[0_0_30px_rgba(220,38,38,0.15)]">
-                                    <div className="flex items-center justify-center min-w-14 w-14 h-14 rounded-full bg-[var(--color-red)] text-white font-black text-xl shadow-glow">
+                                <div className="mb-8 inline-flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 rounded-3xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20 shadow-[0_0_30px_rgba(220,38,38,0.15)]">
+                                    <div className="flex items-center justify-center min-w-12 w-12 h-12 rounded-full bg-[var(--color-red)] text-white font-black text-lg shadow-glow">
                                         %
                                     </div>
                                     <div>
-                                        <p className="text-[var(--color-red)] font-black uppercase tracking-tight text-lg mb-1 flex items-center gap-2">
+                                        <p className="text-[var(--color-red)] font-black uppercase tracking-tight text-base mb-0.5 flex items-center gap-2">
                                             Offre du moment : {service.promo_badge}
                                         </p>
                                         {service.promo_desc && (
-                                            <p className="text-gray-300 text-sm font-medium">
+                                            <p className="text-gray-300 text-xs font-medium">
                                                 {service.promo_desc}
                                             </p>
                                         )}
@@ -60,7 +60,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 </div>
                             )}
 
-                            <div className="flex flex-wrap items-center gap-8">
+                            <div className="flex flex-wrap items-center gap-6">
                                 {service.duration_minutes && (
                                     <div className="flex items-center gap-3">
                                         <div className="w-12 h-12 rounded-2xl bg-white/5 backdrop-blur-md flex items-center justify-center border border-white/10">
@@ -77,11 +77,11 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                         <Gauge className="w-6 h-6 text-[var(--color-red)]" />
                                     </div>
                                     <div>
-                                        <p className="text-[10px] uppercase font-bold text-gray-500 tracking-widest">{service.price_from ? "Investissement" : "Tarif"}</p>
-                                        <div className="flex items-center gap-2">
-                                            <p className="text-white font-bold">{service.price_from ? `À partir de ${service.price_from}€` : "Sur devis"}</p>
+                                        <p className="text-[10px] uppercase font-bold text-gray-500 tracking-widest leading-none mb-1">{service.price_from ? "Investissement" : "Tarif"}</p>
+                                        <div className="flex items-baseline gap-2 leading-none">
+                                            <p className="text-white font-bold text-lg md:text-xl">{service.price_from ? `À partir de ${service.price_from}€` : "Sur devis"}</p>
                                             {service.old_price && (
-                                                <span className="text-sm text-gray-500 line-through decoration-[var(--color-red)]">{service.old_price}€</span>
+                                                <span className="text-sm font-medium text-gray-500 line-through decoration-[var(--color-red)]">{service.old_price}€</span>
                                             )}
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     </div>
                 </div>
 
-                <Section className="pb-32 -mt-20" background="black">
+                <Section className="pb-32 -mt-10" background="black">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 relative z-30">
                         {/* Main Content */}
                         <div className="lg:col-span-2 space-y-16">
