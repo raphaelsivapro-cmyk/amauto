@@ -37,6 +37,16 @@ export function ServiceCard({ service }: ServiceCardProps) {
                 <div className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-xs font-bold text-white uppercase tracking-wider border border-white/10">
                     {service.category}
                 </div>
+                {service.promo_badge && (
+                    <div className="absolute top-4 right-4 flex flex-col items-end gap-1">
+                        <div className="px-3 py-1 bg-[var(--color-red)] text-white font-black rounded-full shadow-glow text-sm uppercase tracking-widest animate-pulse">
+                            {service.promo_badge}
+                        </div>
+                        <div className="px-2 py-0.5 bg-black/60 backdrop-blur-md rounded-full text-[10px] font-bold text-white uppercase tracking-wider border border-white/10">
+                            Offre du moment
+                        </div>
+                    </div>
+                )}
             </div>
 
             <div className="p-6 flex flex-col flex-grow">
@@ -48,19 +58,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
                 </p>
 
                 {/* This flex-grow div pushes the footer to the bottom */}
-                <div className="flex-grow">
-                    {service.promo_badge && (
-                        <div className="p-4 rounded-2xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20">
-                            <p className="text-[var(--color-red)] font-black text-sm uppercase tracking-tight mb-1 flex items-center gap-2">
-                                <span className="w-2 h-2 rounded-full bg-[var(--color-red)] animate-pulse" />
-                                Offre du moment : {service.promo_badge}
-                            </p>
-                            {service.promo_desc && (
-                                <p className="text-white/80 text-xs font-medium">{service.promo_desc}</p>
-                            )}
-                        </div>
-                    )}
-                </div>
+                <div className="flex-grow" />
 
                 <div className="flex items-center justify-between border-t border-white/5 pt-4">
                     <div className="flex flex-col">
