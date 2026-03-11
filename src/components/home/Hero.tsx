@@ -14,7 +14,7 @@ export function Hero() {
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover opacity-90 contrast-[1.1] scale-105 blur-[4px]"
+                    className="w-full h-full object-cover opacity-[0.85]"
                 >
                     <source
                         src="/hero-video.mp4"
