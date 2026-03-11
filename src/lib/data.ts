@@ -47,7 +47,7 @@ export const SERVICES_DATA = [
         price_from: 49,
         duration_minutes: 45,
         description: "Lecture des codes défauts, diagnostic panne moteur ou voyant tableau de bord avec valise multi-marques.",
-        image: "/images/diagnostic.png"
+        image: "/images/diagnostic-modern.png"
     },
     {
         id: "6",
@@ -57,7 +57,7 @@ export const SERVICES_DATA = [
         price_from: 500,
         duration_minutes: 360,
         description: "Remplacement complet du kit d'embrayage et de la transmission. Retrouvez des passages de vitesse fluides et une motricité optimale.",
-        image: "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&q=80&w=1000"
+        image: "/images/clutch.png"
     }
 ];
 
