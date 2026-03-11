@@ -77,9 +77,17 @@ export function Hero() {
                                 <p className="text-white text-base md:text-lg font-bold mb-1">
                                     Sur le Kit de distribution & kit d'accessoires
                                 </p>
-                                <p className="text-gray-400 text-sm font-medium">
-                                    Valable du 11 mars au 11 avril
-                                </p>
+                                <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-3">
+                                    <p className="text-gray-400 text-sm font-medium">
+                                        Valable du 11 mars au 11 avril 2026
+                                    </p>
+                                    <Link href="/prestations/distribution">
+                                        <Button size="sm" className="rounded-full shadow-glow text-xs uppercase tracking-wider font-bold h-9">
+                                            Voir l'offre
+                                            <ArrowRight className="ml-2 w-3 h-3" />
+                                        </Button>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
