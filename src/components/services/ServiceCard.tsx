@@ -37,11 +37,6 @@ export function ServiceCard({ service }: ServiceCardProps) {
                 <div className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-xs font-bold text-white uppercase tracking-wider border border-white/10">
                     {service.category}
                 </div>
-                {service.promo_badge && (
-                    <div className="absolute top-4 right-4 px-3 py-1 bg-[var(--color-red)] text-white font-black rounded-full shadow-glow text-xs uppercase tracking-widest animate-pulse">
-                        {service.promo_badge}
-                    </div>
-                )}
             </div>
 
             <div className="p-6 flex flex-col flex-grow">
