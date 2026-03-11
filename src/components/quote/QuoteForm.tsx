@@ -120,7 +120,7 @@ export function QuoteForm() {
             </div>
 
             <div className="space-y-2 relative z-10">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Raison du rendez-vous</label>
+                <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Détails de la demande</label>
                 <textarea
                     rows={4}
                     required
