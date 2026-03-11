@@ -42,6 +42,24 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                 <span className="text-[var(--color-red)] text-glow">.</span>
                             </h1>
 
+                            {service.promo_badge && (
+                                <div className="mb-10 inline-flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 rounded-3xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20 shadow-[0_0_30px_rgba(220,38,38,0.15)]">
+                                    <div className="flex items-center justify-center min-w-14 w-14 h-14 rounded-full bg-[var(--color-red)] text-white font-black text-xl shadow-glow">
+                                        %
+                                    </div>
+                                    <div>
+                                        <p className="text-[var(--color-red)] font-black uppercase tracking-tight text-lg mb-1 flex items-center gap-2">
+                                            Offre du moment : {service.promo_badge}
+                                        </p>
+                                        {service.promo_desc && (
+                                            <p className="text-gray-300 text-sm font-medium">
+                                                {service.promo_desc}
+                                            </p>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+
                             <div className="flex flex-wrap items-center gap-8">
                                 {service.duration_minutes && (
                                     <div className="flex items-center gap-3">
@@ -60,7 +78,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                     </div>
                                     <div>
                                         <p className="text-[10px] uppercase font-bold text-gray-500 tracking-widest">{service.price_from ? "Investissement" : "Tarif"}</p>
-                                        <p className="text-white font-bold">{service.price_from ? `À partir de ${service.price_from}€` : "Sur devis"}</p>
+                                        <div className="flex items-center gap-2">
+                                            <p className="text-white font-bold">{service.price_from ? `À partir de ${service.price_from}€` : "Sur devis"}</p>
+                                            {service.old_price && (
+                                                <span className="text-sm text-gray-500 line-through decoration-[var(--color-red)]">{service.old_price}€</span>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
