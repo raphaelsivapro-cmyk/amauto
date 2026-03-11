@@ -5,6 +5,11 @@ import { useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { Calendar, CheckCircle2, User, Car } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import DatePicker, { registerLocale } from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { fr } from 'date-fns/locale';
+
+registerLocale('fr', fr);
 
 const STEPS = [
     { number: 1, title: "Prestation", icon: Car },
@@ -17,7 +22,7 @@ export function BookingForm() {
     const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
     const [formData, setFormData] = useState({
         service: '',
-        date: '',
+        date: null as Date | null,
         slot: '',
         vehicle_plate: '',
         problem_desc: '',
@@ -26,21 +31,9 @@ export function BookingForm() {
         email: ''
     });
 
-    // Get today's date in YYYY-MM-DD format for min date
-    const today = new Date().toISOString().split('T')[0];
-
-    const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const selectedDate = new Date(e.target.value);
-        const day = selectedDate.getDay();
-        // 0 is Sunday, 6 is Saturday
-        if (day === 0 || day === 6) {
-            alert('Le garage est fermé le week-end. Veuillez choisir un jour de semaine.');
-            // Reset the input value
-            e.target.value = '';
-            setFormData({ ...formData, date: '' });
-            return;
-        }
-        setFormData({ ...formData, date: e.target.value });
+    const isWeekday = (date: Date) => {
+        const day = date.getDay();
+        return day !== 0 && day !== 6;
     };
 
     const handleSubmit = async () => {
@@ -139,13 +132,17 @@ export function BookingForm() {
                     <div className="space-y-8 animate-fade-up">
                         <h3 className="text-xl font-bold text-white uppercase tracking-wide">Date et Heure</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div>
+                            <div className="custom-datepicker-wrapper">
                                 <label className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3 block">Date</label>
-                                <input
-                                    type="date"
-                                    min={today}
-                                    className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white focus:border-[var(--color-red)] outline-none transition-colors"
-                                    onChange={handleDateChange}
+                                <DatePicker
+                                    selected={formData.date}
+                                    onChange={(date: Date | null) => setFormData({ ...formData, date })}
+                                    filterDate={isWeekday}
+                                    minDate={new Date()}
+                                    locale="fr"
+                                    dateFormat="dd/MM/yyyy"
+                                    placeholderText="jj/mm/aaaa"
+                                    className="w-full bg-black/20 border border-white/10 rounded-lg p-4 text-white hover:border-[var(--color-red)]/50 focus:border-[var(--color-red)] outline-none transition-colors cursor-pointer"
                                 />
                             </div>
                             <div>
