@@ -36,7 +36,7 @@ export const SERVICES_DATA = [
         category: "reparations",
         price_from: 450,
         duration_minutes: 240,
-        description: "Remplacement courroie de distribution, pompe à eau et galets. À faire selon préconisation constructeur.",
+        description: "Remplacement kit de courroie de distribution, pompe à eau et kit d'accessoires. À faire selon préconisation constructeur.",
         image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=1000"
     },
     {
