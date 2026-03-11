@@ -217,7 +217,7 @@ export function BookingForm() {
                         </div>
 
                         <div className="space-y-2 mt-6">
-                            <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Raison du RDV / Problème rencontré</label>
+                            <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Raison du rendez-vous</label>
                             <textarea
                                 rows={4}
                                 required
