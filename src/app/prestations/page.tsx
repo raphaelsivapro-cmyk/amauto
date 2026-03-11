@@ -9,10 +9,10 @@ import { Section } from "@/components/ui/Section";
 
 const CATEGORIES = [
     { label: "Tout voir", value: "all" },
-    { label: "Entretien", value: "entretien" },
+    { label: "Entretien Courant", value: "entretien" },
+    { label: "Mécanique", value: "mecanique" },
     { label: "Pneumatiques", value: "pneumatiques" },
-    { label: "Réparations", value: "reparations" },
-    { label: "Autres", value: "autres" },
+    { label: "Diagnostic", value: "diagnostic" },
 ];
 
 export default function ServicesPage() {

@@ -1,15 +1,5 @@
 export const SERVICES_DATA = [
     {
-        id: "1",
-        slug: "montage-pneus",
-        title: "Montage & Équilibrage",
-        category: "pneumatiques",
-        price_from: 15,
-        duration_minutes: 30,
-        description: "Montage, valvage et équilibrage de vos pneumatiques. Nous prenons également en charge la réparation sécurisée de vos pneus crevés.",
-        image: "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&q=80&w=1000"
-    },
-    {
         id: "2",
         slug: "vidange-filtres",
         title: "Vidange & Filtres",
@@ -30,30 +20,38 @@ export const SERVICES_DATA = [
         image: "/images/brakes.png"
     },
     {
+        id: "8",
+        slug: "systeme-injection",
+        title: "Système d'Injection",
+        category: "entretien",
+        description: "Nettoyage, contrôle et remplacement d'injecteurs. Optimisez vos performances et réduisez votre consommation de carburant.",
+        image: "/images/service-injection.png"
+    },
+    {
+        id: "1",
+        slug: "montage-pneus",
+        title: "Montage & Équilibrage",
+        category: "pneumatiques",
+        price_from: 15,
+        duration_minutes: 30,
+        description: "Montage, valvage et équilibrage de vos pneumatiques. Nous prenons également en charge la réparation sécurisée de vos pneus crevés.",
+        image: "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&q=80&w=1000"
+    },
+    {
         id: "4",
         slug: "distribution",
         title: "Kit Distribution",
-        category: "reparations",
+        category: "mecanique",
         price_from: 450,
         duration_minutes: 240,
         description: "Remplacement kit de courroie de distribution, pompe à eau et kit d'accessoires. À faire selon préconisation constructeur.",
         image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=1000"
     },
     {
-        id: "5",
-        slug: "diagnostic-electronique",
-        title: "Diagnostic Électronique",
-        category: "autres",
-        price_from: 50,
-        duration_minutes: 45,
-        description: "Lecture des codes défauts, diagnostic panne moteur ou voyant tableau de bord avec valise multi-marques.",
-        image: "/images/diagnostic-modern.png"
-    },
-    {
         id: "6",
         slug: "embrayage",
         title: "Kit Embrayage & Transmission",
-        category: "reparations",
+        category: "mecanique",
         price_from: 500,
         duration_minutes: 360,
         description: "Remplacement complet du kit d'embrayage et de la transmission. Retrouvez des passages de vitesse fluides et une motricité optimale.",
@@ -63,25 +61,27 @@ export const SERVICES_DATA = [
         id: "7",
         slug: "direction-suspension",
         title: "Direction & Suspension",
-        category: "reparations",
+        category: "mecanique",
         description: "Remplacement d'amortisseurs, rotules et triangles. Restaurez la tenue de route et le confort d'origine de votre véhicule.",
         image: "/images/service-suspension.png"
-    },
-    {
-        id: "8",
-        slug: "systeme-injection",
-        title: "Système d'Injection",
-        category: "entretien",
-        description: "Nettoyage, contrôle et remplacement d'injecteurs. Optimisez vos performances et réduisez votre consommation de carburant.",
-        image: "/images/service-injection.png"
     },
     {
         id: "9",
         slug: "systeme-echappement",
         title: "Système d'Échappement",
-        category: "reparations",
+        category: "mecanique",
         description: "Remplacement de collecteur d'échappement, sonde lambda et nettoyage FAP (Filtre À Particules).",
         image: "/images/service-exhaust.png"
+    },
+    {
+        id: "5",
+        slug: "diagnostic-electronique",
+        title: "Diagnostic Électronique",
+        category: "diagnostic",
+        price_from: 50,
+        duration_minutes: 45,
+        description: "Lecture des codes défauts, diagnostic panne moteur ou voyant tableau de bord avec valise multi-marques.",
+        image: "/images/diagnostic-modern.png"
     }
 ];
 
