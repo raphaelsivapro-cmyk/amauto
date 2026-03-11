@@ -52,11 +52,11 @@ export const SERVICES_DATA = [
     {
         id: "6",
         slug: "embrayage",
-        title: "Remplacement Embrayage",
+        title: "Kit Embrayage & Transmission",
         category: "reparations",
         price_from: 500,
         duration_minutes: 360,
-        description: "Changement kit d'embrayage complet. Retrouvez une conduite souple et précise.",
+        description: "Remplacement complet du kit d'embrayage et contrôle de la transmission. Retrouvez des passages de vitesse fluides et une motricité optimale.",
         image: "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&q=80&w=1000"
     }
 ];
