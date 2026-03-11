@@ -20,7 +20,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
     return (
         <Link
             href={`/prestations/${service.slug}`}
-            className="group block rounded-[var(--radius-xl)] bg-[var(--color-charcoal-light)] border border-white/5 overflow-hidden hover:border-[var(--color-red)]/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[var(--shadow-card)]"
+            className="group flex flex-col h-full rounded-[var(--radius-xl)] bg-[var(--color-charcoal-light)] border border-white/5 overflow-hidden hover:border-[var(--color-red)]/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[var(--shadow-card)]"
         >
             <div className="aspect-video relative overflow-hidden">
                 {service.image ? (
@@ -44,7 +44,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
                 )}
             </div>
 
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[var(--color-red)] transition-colors uppercase tracking-tight">
                     {service.title}
                 </h3>
@@ -52,17 +52,20 @@ export function ServiceCard({ service }: ServiceCardProps) {
                     {service.description}
                 </p>
 
-                {service.promo_badge && (
-                    <div className="mb-6 p-4 rounded-2xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20">
-                        <p className="text-[var(--color-red)] font-black text-sm uppercase tracking-tight mb-1 flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-[var(--color-red)] animate-pulse" />
-                            Offre du moment : {service.promo_badge}
-                        </p>
-                        {service.promo_desc && (
-                            <p className="text-white/80 text-xs font-medium">{service.promo_desc}</p>
-                        )}
-                    </div>
-                )}
+                {/* This flex-grow div pushes the footer to the bottom */}
+                <div className="flex-grow">
+                    {service.promo_badge && (
+                        <div className="p-4 rounded-2xl bg-[var(--color-red)]/10 border border-[var(--color-red)]/20">
+                            <p className="text-[var(--color-red)] font-black text-sm uppercase tracking-tight mb-1 flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-[var(--color-red)] animate-pulse" />
+                                Offre du moment : {service.promo_badge}
+                            </p>
+                            {service.promo_desc && (
+                                <p className="text-white/80 text-xs font-medium">{service.promo_desc}</p>
+                            )}
+                        </div>
+                    )}
+                </div>
 
                 <div className="flex items-center justify-between border-t border-white/5 pt-4">
                     <div className="flex flex-col">
