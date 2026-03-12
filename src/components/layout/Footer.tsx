@@ -28,7 +28,7 @@ export function Footer() {
                             <img
                                 src="/logo.png"
                                 alt="AM AUTO"
-                                className="h-14 w-auto object-contain px-2"
+                                className="h-14 w-auto object-contain mix-blend-screen brightness-110 px-2"
                             />
                         </Link>
                         <p className="text-gray-500 text-xs leading-relaxed max-w-[220px]">

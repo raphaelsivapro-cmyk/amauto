@@ -40,7 +40,7 @@ export function Header() {
                     <img
                         src="/logo.png"
                         alt="AM AUTO"
-                        className="h-24 md:h-32 w-auto object-contain mix-blend-screen"
+                        className="h-24 md:h-32 w-auto object-contain mix-blend-screen brightness-110"
                     />
                 </Link>
 
