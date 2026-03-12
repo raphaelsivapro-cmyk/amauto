@@ -24,10 +24,12 @@ export function Footer() {
 
                     {/* Brand — 3 cols */}
                     <div className="lg:col-span-3 space-y-5">
-                        <Link href="/" className="block -ml-3">
-                            <span className="text-2xl font-black tracking-tighter text-white px-3">
-                                AM AUTO
-                            </span>
+                        <Link href="/" className="block -ml-3 hover:opacity-80 transition-opacity duration-300">
+                            <img
+                                src="/logo.png"
+                                alt="AM AUTO"
+                                className="h-10 w-auto object-contain mix-blend-screen px-3"
+                            />
                         </Link>
                         <p className="text-gray-500 text-xs leading-relaxed max-w-[220px]">
                             L&apos;excellence automobile à Floirac. Entretien, réparation et expertise technique.
