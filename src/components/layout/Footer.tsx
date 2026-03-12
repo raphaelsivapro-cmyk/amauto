@@ -24,11 +24,11 @@ export function Footer() {
 
                     {/* Brand — 3 cols */}
                     <div className="lg:col-span-3 space-y-5">
-                        <Link href="/" className="block -ml-3 hover:opacity-80 transition-opacity duration-300">
+                        <Link href="/" className="block hover:opacity-80 transition-opacity duration-300">
                             <img
                                 src="/logo.png"
                                 alt="AM AUTO"
-                                className="h-14 w-auto object-contain mix-blend-screen brightness-110 px-2"
+                                className="h-12 md:h-16 w-auto object-contain"
                             />
                         </Link>
                         <p className="text-gray-500 text-xs leading-relaxed max-w-[220px]">

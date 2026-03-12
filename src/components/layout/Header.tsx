@@ -36,11 +36,11 @@ export function Header() {
             )}
         >
             <div className="container px-4 md:px-6 flex items-center justify-between">
-                <Link href="/" className="flex items-center group -ml-8 hover:opacity-80 transition-opacity duration-300">
+                <Link href="/" className="flex items-center group hover:opacity-80 transition-opacity duration-300">
                     <img
                         src="/logo.png"
                         alt="AM AUTO"
-                        className="h-24 md:h-32 w-auto object-contain mix-blend-screen brightness-110"
+                        className="h-10 md:h-14 lg:h-16 w-auto object-contain"
                     />
                 </Link>
 
