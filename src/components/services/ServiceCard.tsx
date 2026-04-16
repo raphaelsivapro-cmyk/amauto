@@ -13,6 +13,7 @@ interface ServiceCardProps {
         duration_minutes?: number;
         image?: string;
         category: string;
+        promo_target_text?: string;
     };
 }
 
@@ -44,7 +45,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
                         </div>
                         <div className="px-2.5 py-1.5 bg-black/80 backdrop-blur-md rounded-xl text-right border border-[var(--color-red)]/30 shadow-lg">
                             <p className="text-[9px] font-black text-[var(--color-red)] uppercase tracking-wider mb-0.5">
-                                Offre du moment sur {service.title.toLowerCase()}
+                                Offre du moment sur {service.promo_target_text || service.title.toLowerCase()}
                             </p>
                             {service.promo_desc && (
                                 <p className="text-[10px] text-white/90 font-medium leading-tight">

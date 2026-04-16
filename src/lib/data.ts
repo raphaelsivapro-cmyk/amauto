@@ -42,14 +42,15 @@ export const SERVICES_DATA = [
     {
         id: "4",
         slug: "distribution",
-        title: "Kit de distribution & pompe à eau incluse",
+        title: "Kit de distribution & kit d'accessoires",
         category: "mecanique",
         price_from: 360,
         old_price: 450,
         promo_badge: "-20%",
         promo_desc: "Valable du 15 avril au 15 mai",
+        promo_target_text: "le kit de distribution",
         duration_minutes: 240,
-        description: "Remplacement kit de courroie de distribution, incluant la pompe à eau. À faire selon préconisation constructeur.",
+        description: "Remplacement kit de courroie de distribution, pompe à eau et kit d'accessoires. À faire selon préconisation constructeur.",
         image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=1000"
     },
     {
