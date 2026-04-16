@@ -68,7 +68,7 @@ export function Hero() {
 
                 {/* Decorative Divider & Promos */}
                 <div className="w-full mt-16 pt-8 border-t border-white/[0.06] animate-fade-up flex justify-center px-4" style={{ animationDelay: '450ms' }}>
-                    <div className="w-full max-w-5xl p-6 md:p-10 rounded-[2.5rem] bg-gradient-to-b from-white/[0.04] to-black/60 border border-white/[0.08] shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden backdrop-blur-xl">
+                    <div className="w-full max-w-6xl lg:max-w-7xl p-6 md:p-10 rounded-[2.5rem] bg-gradient-to-b from-white/[0.04] to-black/60 border border-white/[0.08] shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden backdrop-blur-xl">
                         {/* Soft Glow Background */}
                         <div className="absolute -top-[150px] -right-[100px] w-[300px] h-[300px] bg-red-500/15 blur-[120px] rounded-full pointer-events-none" />
                         
