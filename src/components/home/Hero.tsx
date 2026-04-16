@@ -105,7 +105,7 @@ export function Hero() {
                                     </div>
                                     <div>
                                         <h4 className="text-white font-black text-[1.1rem] uppercase tracking-tight mb-1">Kit de distribution</h4>
-                                        <p className="text-sm text-gray-400 font-medium leading-snug">Pompe à eau & kit d'accessoires</p>
+                                        <p className="text-sm text-gray-400 font-medium leading-snug">Pompe à eau incluse</p>
                                     </div>
                                 </div>
                                 <div className="mt-auto">
