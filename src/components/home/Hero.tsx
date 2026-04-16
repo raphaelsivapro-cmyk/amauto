@@ -70,18 +70,18 @@ export function Hero() {
                 <div className="w-full mt-16 pt-8 border-t border-white/[0.06] animate-fade-up flex justify-center px-4" style={{ animationDelay: '450ms' }}>
                     <div className="w-full max-w-5xl p-6 md:p-10 rounded-[2.5rem] bg-gradient-to-b from-white/[0.04] to-black/60 border border-white/[0.08] shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden backdrop-blur-xl">
                         {/* Soft Glow Background */}
-                        <div className="absolute -top-[150px] -right-[100px] w-[300px] h-[300px] bg-[var(--color-red)]/15 blur-[120px] rounded-full pointer-events-none" />
+                        <div className="absolute -top-[150px] -right-[100px] w-[300px] h-[300px] bg-red-500/15 blur-[120px] rounded-full pointer-events-none" />
                         
                         {/* Header Box */}
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-white/[0.06] pb-6 relative z-10">
                             <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5 md:gap-6">
-                                <div className="flex flex-shrink-0 items-center justify-center min-w-[4rem] w-16 h-16 rounded-2xl bg-gradient-to-br from-[var(--color-red)] to-red-950/80 border border-red-500/30 text-white font-black text-3xl shadow-[0_0_30px_rgba(220,38,38,0.3)]">
+                                <div className="flex flex-shrink-0 items-center justify-center min-w-[4rem] w-16 h-16 md:w-20 md:h-20 md:text-4xl rounded-2xl bg-red-600 border border-red-400/50 text-white font-black text-3xl shadow-[0_0_30px_rgba(239,68,68,0.4)]">
                                     %
                                 </div>
                                 <div className="flex flex-col items-center sm:items-start">
                                     <h3 className="text-white font-black uppercase tracking-tight text-2xl md:text-4xl mb-3 sm:mb-2 flex flex-wrap justify-center sm:justify-start items-center gap-x-3 gap-y-3">
-                                        Offre du <span className="text-[var(--color-red)] text-glow">moment</span>
-                                        <span className="inline-flex px-4 md:px-5 py-1.5 md:py-2 bg-[var(--color-red)] text-white shadow-[0_0_20px_rgba(220,38,38,0.5)] border border-red-400/50 rounded-xl font-black tracking-widest text-lg md:text-2xl md:translate-y-[-2px]">
+                                        Offre du <span className="text-red-500 text-glow">moment</span>
+                                        <span className="inline-flex px-4 md:px-5 py-1.5 md:py-2 bg-red-600 text-white shadow-[0_0_20px_rgba(239,68,68,0.5)] border border-red-400/80 rounded-xl font-black tracking-widest text-lg md:text-2xl md:translate-y-[-2px]">
                                             -20%
                                         </span>
                                     </h3>
@@ -100,17 +100,17 @@ export function Hero() {
                             {/* Offer 1 */}
                             <div className="flex flex-col h-full bg-black/40 border border-white/5 hover:border-[var(--color-red)]/30 rounded-[1.5rem] p-6 md:p-8 hover:bg-white/[0.02] transition-all duration-300 group hover:shadow-[0_0_30px_rgba(220,38,38,0.1)]">
                                 <div className="flex items-start gap-4 mb-6 md:mb-8">
-                                    <div className="w-12 h-12 rounded-[1rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center text-[var(--color-red)] group-hover:scale-110 group-hover:bg-[var(--color-red)]/10 group-hover:border-[var(--color-red)]/30 transition-all duration-500">
+                                    <div className="w-12 h-12 rounded-[1rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center text-red-500 group-hover:scale-110 group-hover:bg-red-500/10 group-hover:border-red-500/30 transition-all duration-500">
                                         <Settings className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="text-[var(--color-red)] font-black text-[1.1rem] md:text-xl uppercase tracking-tight mb-1">Kit de distribution</h4>
+                                        <h4 className="text-red-500 font-black text-[1.1rem] md:text-xl uppercase tracking-tight mb-1">Kit de distribution</h4>
                                         <p className="text-sm md:text-base text-gray-400 font-medium leading-snug">Pompe à eau & kit d'accessoires</p>
                                     </div>
                                 </div>
                                 <div className="mt-auto">
                                     <Link href="/prestations/distribution" className="block">
-                                        <Button size="sm" variant="outline" className="w-full h-12 md:h-14 flex justify-between items-center bg-transparent border-white/10 text-gray-300 hover:text-white hover:border-[var(--color-red)] hover:bg-[var(--color-red)] group-hover:border-[var(--color-red)]/50 rounded-xl transition-all duration-300 font-bold uppercase tracking-wider text-xs md:text-sm">
+                                        <Button size="sm" variant="outline" className="w-full h-12 md:h-14 flex justify-between items-center bg-transparent border-white/10 text-gray-300 hover:text-white hover:border-red-500 hover:bg-red-600 group-hover:border-red-500/50 rounded-xl transition-all duration-300 font-bold uppercase tracking-wider text-xs md:text-sm">
                                             Voir l'offre
                                             <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
                                         </Button>
@@ -121,17 +121,17 @@ export function Hero() {
                             {/* Offer 2 */}
                              <div className="flex flex-col h-full bg-black/40 border border-white/5 hover:border-[var(--color-red)]/30 rounded-[1.5rem] p-6 md:p-8 hover:bg-white/[0.02] transition-all duration-300 group hover:shadow-[0_0_30px_rgba(220,38,38,0.1)]">
                                 <div className="flex items-start gap-4 mb-6 md:mb-8">
-                                    <div className="w-12 h-12 rounded-[1rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center text-[var(--color-red)] group-hover:scale-110 group-hover:bg-[var(--color-red)]/10 group-hover:border-[var(--color-red)]/30 transition-all duration-500">
+                                    <div className="w-12 h-12 rounded-[1rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center text-red-500 group-hover:scale-110 group-hover:bg-red-500/10 group-hover:border-red-500/30 transition-all duration-500">
                                         <Shield className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="text-[var(--color-red)] font-black text-[1.1rem] md:text-xl uppercase tracking-tight mb-1">Disques & Plaquettes</h4>
+                                        <h4 className="text-red-500 font-black text-[1.1rem] md:text-xl uppercase tracking-tight mb-1">Disques & Plaquettes</h4>
                                         <p className="text-sm md:text-base text-gray-400 font-medium leading-snug">Système de freinage complet</p>
                                     </div>
                                 </div>
                                 <div className="mt-auto">
                                     <Link href="/prestations/freinage" className="block">
-                                        <Button size="sm" variant="outline" className="w-full h-12 md:h-14 flex justify-between items-center bg-transparent border-white/10 text-gray-300 hover:text-white hover:border-[var(--color-red)] hover:bg-[var(--color-red)] group-hover:border-[var(--color-red)]/50 rounded-xl transition-all duration-300 font-bold uppercase tracking-wider text-xs md:text-sm">
+                                        <Button size="sm" variant="outline" className="w-full h-12 md:h-14 flex justify-between items-center bg-transparent border-white/10 text-gray-300 hover:text-white hover:border-red-500 hover:bg-red-600 group-hover:border-red-500/50 rounded-xl transition-all duration-300 font-bold uppercase tracking-wider text-xs md:text-sm">
                                             Voir l'offre
                                             <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
                                         </Button>
