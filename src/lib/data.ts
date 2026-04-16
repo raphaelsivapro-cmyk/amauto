@@ -15,6 +15,8 @@ export const SERVICES_DATA = [
         title: "Disques & Plaquettes de Frein",
         category: "entretien",
         price_from: 110,
+        promo_badge: "-20%",
+        promo_desc: "Valable du 15 avril au 15 mai",
         duration_minutes: 90,
         description: "Remplacement des organes de freinage pour votre sécurité. Diagnostic du système complet inclus.",
         image: "/images/brakes.png"
@@ -45,7 +47,7 @@ export const SERVICES_DATA = [
         price_from: 360,
         old_price: 450,
         promo_badge: "-20%",
-        promo_desc: "Valable du 11 mars au 11 avril 2026",
+        promo_desc: "Valable du 15 avril au 15 mai",
         duration_minutes: 240,
         description: "Remplacement kit de courroie de distribution, pompe à eau et kit d'accessoires. À faire selon préconisation constructeur.",
         image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=1000"

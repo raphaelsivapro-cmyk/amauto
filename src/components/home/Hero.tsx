@@ -77,11 +77,11 @@ export function Hero() {
                                 Offre du moment : -20%
                             </p>
                             <p className="text-white text-lg md:text-xl font-bold mb-2">
-                                Sur le Kit de distribution
+                                Sur le Kit de distribution et Disques & Plaquettes de frein
                             </p>
                             <div className="flex flex-col sm:flex-row sm:items-center gap-6 mt-5">
                                 <p className="text-gray-400 text-base font-medium">
-                                    Valable du 11 mars au 11 avril 2026
+                                    Valable du 15 avril au 15 mai
                                 </p>
                                 <Link href="/prestations/distribution">
                                     <Button size="md" className="rounded-full shadow-glow text-sm uppercase tracking-wider font-bold h-11 px-6">
