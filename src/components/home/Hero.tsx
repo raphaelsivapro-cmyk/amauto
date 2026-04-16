@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-import { ArrowRight, Star, Car, Award } from "lucide-react";
+import { ArrowRight, Star, Car, Award, Clock, Settings, Shield } from "lucide-react";
 
 export function Hero() {
     return (
@@ -66,31 +66,80 @@ export function Hero() {
                 </div>
 
 
-                {/* Decorative Divider & Promos - Real centering without breaking vertical align */}
-                <div className="w-full mt-16 pt-8 border-t border-white/[0.06] animate-fade-up flex justify-center" style={{ animationDelay: '450ms' }}>
-                    <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-8 p-8 md:p-10 rounded-[2rem] bg-[var(--color-red)]/10 border border-[var(--color-red)]/20 shadow-[0_0_40px_rgba(220,38,38,0.2)] text-left">
-                        <div className="flex items-center justify-center min-w-20 w-20 h-20 rounded-full bg-[var(--color-red)] text-white font-black text-3xl shadow-glow">
-                            %
-                        </div>
-                        <div>
-                            <p className="text-[var(--color-red)] font-black uppercase tracking-tight text-2xl md:text-3xl mb-3 text-glow">
-                                Offre du moment : -20%
-                            </p>
-                            <p className="text-white text-lg md:text-xl font-bold mb-2">
-                                Sur le Kit de distribution et Disques & Plaquettes de frein
-                            </p>
-                            <div className="flex flex-col sm:flex-row sm:items-center gap-6 mt-5">
-                                <p className="text-gray-400 text-base font-medium">
-                                    Valable du 15 avril au 15 mai
-                                </p>
-                                <Link href="/prestations/distribution">
-                                    <Button size="md" className="rounded-full shadow-glow text-sm uppercase tracking-wider font-bold h-11 px-6">
-                                        Voir l'offre
-                                        <ArrowRight className="ml-2 w-4 h-4" />
-                                    </Button>
-                                </Link>
+                {/* Decorative Divider & Promos */}
+                <div className="w-full mt-16 pt-8 border-t border-white/[0.06] animate-fade-up flex justify-center px-4" style={{ animationDelay: '450ms' }}>
+                    <div className="w-full max-w-4xl p-6 md:p-8 rounded-[2.5rem] bg-gradient-to-b from-white/[0.04] to-black/60 border border-white/[0.08] shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden backdrop-blur-xl">
+                        {/* Soft Glow Background */}
+                        <div className="absolute -top-[150px] -right-[100px] w-[300px] h-[300px] bg-[var(--color-red)]/15 blur-[120px] rounded-full pointer-events-none" />
+                        
+                        {/* Header Box */}
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-white/[0.06] pb-6 relative z-10">
+                            <div className="flex items-center gap-5 md:gap-6">
+                                <div className="flex items-center justify-center min-w-[4rem] w-16 h-16 rounded-2xl bg-gradient-to-br from-[var(--color-red)] to-red-950/80 border border-red-500/30 text-white font-black text-3xl shadow-[0_0_30px_rgba(220,38,38,0.3)]">
+                                    %
+                                </div>
+                                <div>
+                                    <h3 className="text-white font-black uppercase tracking-tight text-2xl md:text-3xl mb-1.5 flex items-center gap-3">
+                                        Offre du <span className="text-[var(--color-red)] text-glow">moment</span>
+                                        <span className="hidden md:inline-flex px-3 py-1 bg-[var(--color-red)]/20 border border-[var(--color-red)]/30 rounded-xl text-[var(--color-red)] font-black tracking-widest text-xs translate-y-[-2px]">
+                                            -20%
+                                        </span>
+                                    </h3>
+                                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-black/40 border border-white/5 rounded-full shadow-inner">
+                                        <Clock className="w-3.5 h-3.5 text-[var(--color-red)] animate-pulse" />
+                                        <span className="text-gray-300 text-sm font-semibold tracking-wide">
+                                            Valable du 15 avril au 15 mai
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        {/* Offers Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10">
+                            {/* Offer 1 */}
+                            <div className="flex flex-col h-full bg-black/40 border border-white/5 hover:border-[var(--color-red)]/30 rounded-[1.5rem] p-6 hover:bg-white/[0.02] transition-all duration-300 group hover:shadow-[0_0_30px_rgba(220,38,38,0.1)]">
+                                <div className="flex items-start gap-4 mb-6">
+                                    <div className="w-12 h-12 rounded-[1rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center text-[var(--color-red)] group-hover:scale-110 group-hover:bg-[var(--color-red)]/10 group-hover:border-[var(--color-red)]/30 transition-all duration-500">
+                                        <Settings className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-white font-black text-[1.1rem] uppercase tracking-tight mb-1">Kit de distribution</h4>
+                                        <p className="text-sm text-gray-400 font-medium leading-snug">Pompe à eau & kit d'accessoires</p>
+                                    </div>
+                                </div>
+                                <div className="mt-auto">
+                                    <Link href="/prestations/distribution" className="block">
+                                        <Button size="sm" variant="outline" className="w-full h-12 flex justify-between items-center bg-transparent border-white/10 text-gray-300 hover:text-white hover:border-[var(--color-red)] hover:bg-[var(--color-red)] group-hover:border-[var(--color-red)]/50 rounded-xl transition-all duration-300 font-bold uppercase tracking-wider text-xs">
+                                            Réserver
+                                            <ArrowRight className="w-4 h-4 ml-2" />
+                                        </Button>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            {/* Offer 2 */}
+                             <div className="flex flex-col h-full bg-black/40 border border-white/5 hover:border-[var(--color-red)]/30 rounded-[1.5rem] p-6 hover:bg-white/[0.02] transition-all duration-300 group hover:shadow-[0_0_30px_rgba(220,38,38,0.1)]">
+                                <div className="flex items-start gap-4 mb-6">
+                                    <div className="w-12 h-12 rounded-[1rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center text-[var(--color-red)] group-hover:scale-110 group-hover:bg-[var(--color-red)]/10 group-hover:border-[var(--color-red)]/30 transition-all duration-500">
+                                        <Shield className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-white font-black text-[1.1rem] uppercase tracking-tight mb-1">Disques & Plaquettes</h4>
+                                        <p className="text-sm text-gray-400 font-medium leading-snug">Système de freinage complet</p>
+                                    </div>
+                                </div>
+                                <div className="mt-auto">
+                                    <Link href="/prestations/freinage" className="block">
+                                        <Button size="sm" variant="outline" className="w-full h-12 flex justify-between items-center bg-transparent border-white/10 text-gray-300 hover:text-white hover:border-[var(--color-red)] hover:bg-[var(--color-red)] group-hover:border-[var(--color-red)]/50 rounded-xl transition-all duration-300 font-bold uppercase tracking-wider text-xs">
+                                            Réserver
+                                            <ArrowRight className="w-4 h-4 ml-2" />
+                                        </Button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
