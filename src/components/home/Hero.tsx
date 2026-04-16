@@ -74,19 +74,19 @@ export function Hero() {
                         
                         {/* Header Box */}
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-white/[0.06] pb-6 relative z-10">
-                            <div className="flex items-center gap-5 md:gap-6">
-                                <div className="flex items-center justify-center min-w-[4rem] w-16 h-16 rounded-2xl bg-gradient-to-br from-[var(--color-red)] to-red-950/80 border border-red-500/30 text-white font-black text-3xl shadow-[0_0_30px_rgba(220,38,38,0.3)]">
+                            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5 md:gap-6">
+                                <div className="flex flex-shrink-0 items-center justify-center min-w-[4rem] w-16 h-16 rounded-2xl bg-gradient-to-br from-[var(--color-red)] to-red-950/80 border border-red-500/30 text-white font-black text-3xl shadow-[0_0_30px_rgba(220,38,38,0.3)]">
                                     %
                                 </div>
-                                <div>
-                                    <h3 className="text-white font-black uppercase tracking-tight text-2xl md:text-3xl mb-1.5 flex items-center gap-3">
+                                <div className="flex flex-col items-center sm:items-start">
+                                    <h3 className="text-white font-black uppercase tracking-tight text-2xl md:text-3xl mb-3 sm:mb-2 flex flex-wrap justify-center sm:justify-start items-center gap-x-3 gap-y-3">
                                         Offre du <span className="text-[var(--color-red)] text-glow">moment</span>
-                                        <span className="inline-flex px-4 py-1.5 bg-[var(--color-red)] text-white shadow-[0_0_20px_rgba(220,38,38,0.5)] border border-red-400/50 rounded-xl font-black tracking-widest text-lg md:text-xl translate-y-[-2px]">
+                                        <span className="inline-flex px-4 py-1.5 bg-[var(--color-red)] text-white shadow-[0_0_20px_rgba(220,38,38,0.5)] border border-red-400/50 rounded-xl font-black tracking-widest text-lg md:text-xl md:translate-y-[-2px]">
                                             -20%
                                         </span>
                                     </h3>
-                                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-black/40 border border-white/5 rounded-full shadow-inner">
-                                        <Clock className="w-3.5 h-3.5 text-[var(--color-red)] animate-pulse" />
+                                    <div className="inline-flex items-center justify-center sm:justify-start gap-2 px-3.5 py-1.5 bg-black/40 border border-white/5 rounded-full shadow-inner">
+                                        <Clock className="w-3.5 h-3.5 text-[var(--color-red)] animate-pulse flex-shrink-0" />
                                         <span className="text-gray-300 text-sm font-semibold tracking-wide">
                                             Valable du 15 avril au 15 mai
                                         </span>
