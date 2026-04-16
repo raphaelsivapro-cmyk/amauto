@@ -81,7 +81,7 @@ export function Hero() {
                                 <div>
                                     <h3 className="text-white font-black uppercase tracking-tight text-2xl md:text-3xl mb-1.5 flex items-center gap-3">
                                         Offre du <span className="text-[var(--color-red)] text-glow">moment</span>
-                                        <span className="hidden md:inline-flex px-3 py-1 bg-[var(--color-red)]/20 border border-[var(--color-red)]/30 rounded-xl text-[var(--color-red)] font-black tracking-widest text-xs translate-y-[-2px]">
+                                        <span className="inline-flex px-4 py-1.5 bg-[var(--color-red)] text-white shadow-[0_0_20px_rgba(220,38,38,0.5)] border border-red-400/50 rounded-xl font-black tracking-widest text-lg md:text-xl translate-y-[-2px]">
                                             -20%
                                         </span>
                                     </h3>
@@ -111,7 +111,7 @@ export function Hero() {
                                 <div className="mt-auto">
                                     <Link href="/prestations/distribution" className="block">
                                         <Button size="sm" variant="outline" className="w-full h-12 flex justify-between items-center bg-transparent border-white/10 text-gray-300 hover:text-white hover:border-[var(--color-red)] hover:bg-[var(--color-red)] group-hover:border-[var(--color-red)]/50 rounded-xl transition-all duration-300 font-bold uppercase tracking-wider text-xs">
-                                            Réserver
+                                            Voir l'offre
                                             <ArrowRight className="w-4 h-4 ml-2" />
                                         </Button>
                                     </Link>
@@ -132,7 +132,7 @@ export function Hero() {
                                 <div className="mt-auto">
                                     <Link href="/prestations/freinage" className="block">
                                         <Button size="sm" variant="outline" className="w-full h-12 flex justify-between items-center bg-transparent border-white/10 text-gray-300 hover:text-white hover:border-[var(--color-red)] hover:bg-[var(--color-red)] group-hover:border-[var(--color-red)]/50 rounded-xl transition-all duration-300 font-bold uppercase tracking-wider text-xs">
-                                            Réserver
+                                            Voir l'offre
                                             <ArrowRight className="w-4 h-4 ml-2" />
                                         </Button>
                                     </Link>
