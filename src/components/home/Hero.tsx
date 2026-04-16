@@ -80,7 +80,7 @@ export function Hero() {
                                 </div>
                                 <div className="flex flex-col items-center sm:items-start">
                                     <h3 className="text-white font-black uppercase tracking-tight text-2xl md:text-4xl mb-3 sm:mb-2 flex flex-wrap justify-center sm:justify-start items-center gap-x-3 gap-y-3">
-                                        Offre du <span className="text-red-500 text-glow">moment</span>
+                                        Offre du <span className="text-red-600 text-glow">moment</span>
                                         <span className="inline-flex px-4 md:px-5 py-1.5 md:py-2 bg-red-600 text-white shadow-[0_0_20px_rgba(239,68,68,0.5)] border border-red-400/80 rounded-xl font-black tracking-widest text-lg md:text-2xl md:translate-y-[-2px]">
                                             -20%
                                         </span>
@@ -100,11 +100,11 @@ export function Hero() {
                             {/* Offer 1 */}
                             <div className="flex flex-col h-full bg-black/40 border border-white/5 hover:border-[var(--color-red)]/30 rounded-[1.5rem] p-6 md:p-8 hover:bg-white/[0.02] transition-all duration-300 group hover:shadow-[0_0_30px_rgba(220,38,38,0.1)]">
                                 <div className="flex items-start gap-4 mb-6 md:mb-8">
-                                    <div className="w-12 h-12 rounded-[1rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center text-red-500 group-hover:scale-110 group-hover:bg-red-500/10 group-hover:border-red-500/30 transition-all duration-500">
+                                    <div className="w-12 h-12 rounded-[1rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center text-red-600 drop-shadow-[0_0_8px_rgba(220,38,38,0.5)] group-hover:scale-110 group-hover:bg-red-600/10 group-hover:border-red-600/30 transition-all duration-500">
                                         <Settings className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="text-red-500 font-black text-[1.1rem] md:text-xl uppercase tracking-tight mb-1">Kit de distribution</h4>
+                                        <h4 className="text-red-600 drop-shadow-[0_0_8px_rgba(220,38,38,0.4)] font-black text-[1.1rem] md:text-xl uppercase tracking-tight mb-1">Kit de distribution</h4>
                                         <p className="text-sm md:text-base text-gray-400 font-medium leading-snug">Pompe à eau incluse</p>
                                     </div>
                                 </div>
@@ -121,11 +121,11 @@ export function Hero() {
                             {/* Offer 2 */}
                              <div className="flex flex-col h-full bg-black/40 border border-white/5 hover:border-[var(--color-red)]/30 rounded-[1.5rem] p-6 md:p-8 hover:bg-white/[0.02] transition-all duration-300 group hover:shadow-[0_0_30px_rgba(220,38,38,0.1)]">
                                 <div className="flex items-start gap-4 mb-6 md:mb-8">
-                                    <div className="w-12 h-12 rounded-[1rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center text-red-500 group-hover:scale-110 group-hover:bg-red-500/10 group-hover:border-red-500/30 transition-all duration-500">
+                                    <div className="w-12 h-12 rounded-[1rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center text-red-600 drop-shadow-[0_0_8px_rgba(220,38,38,0.5)] group-hover:scale-110 group-hover:bg-red-600/10 group-hover:border-red-600/30 transition-all duration-500">
                                         <Shield className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h4 className="text-red-500 font-black text-[1.1rem] md:text-xl uppercase tracking-tight mb-1">Disques & Plaquettes</h4>
+                                        <h4 className="text-red-600 drop-shadow-[0_0_8px_rgba(220,38,38,0.4)] font-black text-[1.1rem] md:text-xl uppercase tracking-tight mb-1">Disques & Plaquettes</h4>
                                         <p className="text-sm md:text-base text-gray-400 font-medium leading-snug">Système de freinage</p>
                                     </div>
                                 </div>
