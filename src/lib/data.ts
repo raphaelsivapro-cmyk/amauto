@@ -1,4 +1,19 @@
-export const SERVICES_DATA = [
+export interface Service {
+    id: string;
+    slug: string;
+    title: string;
+    category: string;
+    price_from?: number;
+    old_price?: number;
+    promo_badge?: string;
+    promo_desc?: string;
+    promo_target_text?: string;
+    duration_minutes?: number;
+    description: string;
+    image: string;
+}
+
+export const SERVICES_DATA: Service[] = [
     {
         id: "2",
         slug: "vidange-filtres",
@@ -15,8 +30,6 @@ export const SERVICES_DATA = [
         title: "Disques & Plaquettes de Frein",
         category: "entretien",
         price_from: 110,
-        promo_badge: "-20%",
-        promo_desc: "Valable du 15 avril au 15 mai",
         duration_minutes: 90,
         description: "Remplacement des organes de freinage pour votre sécurité. Diagnostic du système complet inclus.",
         image: "/images/brakes.png"
@@ -45,10 +58,6 @@ export const SERVICES_DATA = [
         title: "Kit de distribution & kit d'accessoires",
         category: "mecanique",
         price_from: 360,
-        old_price: 450,
-        promo_badge: "-20%",
-        promo_desc: "Valable du 15 avril au 15 mai",
-        promo_target_text: "le kit de distribution",
         duration_minutes: 240,
         description: "Remplacement kit de courroie de distribution, pompe à eau et kit d'accessoires. À faire selon préconisation constructeur.",
         image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=1000"
