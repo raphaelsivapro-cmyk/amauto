@@ -29,6 +29,34 @@ export default function RootLayout({
               gtag('js', new Date());
 
               gtag('config', 'AW-18009548220');
+
+              function gtag_report_phone_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                  'send_to': 'AW-18009548220/C17AC0bwxq8cELzLz4tD',
+                  'value': 1.0,
+                  'currency': 'EUR',
+                  'event_callback': callback
+                });
+                return false;
+              }
+
+              if (typeof window !== 'undefined') {
+                document.addEventListener('click', function(e) {
+                  var target = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+                  if (target) {
+                    gtag('event', 'conversion', {
+                      'send_to': 'AW-18009548220/C17AC0bwxq8cELzLz4tD',
+                      'value': 1.0,
+                      'currency': 'EUR'
+                    });
+                  }
+                });
+              }
             `,
           }}
         />
