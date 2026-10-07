@@ -30,7 +30,8 @@ export default function RootLayout({
 
               gtag('config', 'AW-18009548220');
 
-              function gtag_report_conversion(url) {
+              // 1. Bouton Téléphone
+              function gtag_report_phone_conversion(url) {
                 var callback = function () {
                   if (typeof(url) != 'undefined') {
                     window.location = url;
@@ -44,8 +45,9 @@ export default function RootLayout({
                 });
                 return false;
               }
-              window.gtag_report_conversion = gtag_report_conversion;
+              window.gtag_report_phone_conversion = gtag_report_phone_conversion;
 
+              // 2. Bouton WhatsApp
               function gtag_report_whatsapp_conversion(url) {
                 var callback = function () {
                   if (typeof(url) != 'undefined') {
@@ -61,6 +63,24 @@ export default function RootLayout({
                 return false;
               }
               window.gtag_report_whatsapp_conversion = gtag_report_whatsapp_conversion;
+
+              // 3. Formulaire de contact / lead
+              function gtag_report_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                  'send_to': 'AW-18009548220/T7HTCOPwxq8cELzLz4tD',
+                  'value': 1.0,
+                  'currency': 'EUR',
+                  'event_callback': callback
+                });
+                return false;
+              }
+              window.gtag_report_conversion = gtag_report_conversion;
+              window.gtag_report_lead_conversion = gtag_report_conversion;
 
               if (typeof window !== 'undefined') {
                 document.addEventListener('click', function(e) {
@@ -83,6 +103,15 @@ export default function RootLayout({
                       'currency': 'EUR'
                     });
                   }
+                });
+
+                // Envoi de formulaire de lead
+                document.addEventListener('submit', function(e) {
+                  gtag('event', 'conversion', {
+                    'send_to': 'AW-18009548220/T7HTCOPwxq8cELzLz4tD',
+                    'value': 1.0,
+                    'currency': 'EUR'
+                  });
                 });
               }
             `,

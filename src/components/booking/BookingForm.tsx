@@ -63,6 +63,13 @@ export function BookingForm() {
             const result = await response.json();
             if (result.success) {
                 setStatus('success');
+                if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+                    (window as any).gtag('event', 'conversion', {
+                        'send_to': 'AW-18009548220/T7HTCOPwxq8cELzLz4tD',
+                        'value': 1.0,
+                        'currency': 'EUR'
+                    });
+                }
             } else {
                 console.error("Web3Forms error:", result);
                 setStatus('error');
