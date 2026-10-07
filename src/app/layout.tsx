@@ -46,12 +46,39 @@ export default function RootLayout({
               }
               window.gtag_report_conversion = gtag_report_conversion;
 
+              function gtag_report_whatsapp_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                  'send_to': 'AW-18009548220/IqnBCOnwxq8cELzLz4tD',
+                  'value': 1.0,
+                  'currency': 'EUR',
+                  'event_callback': callback
+                });
+                return false;
+              }
+              window.gtag_report_whatsapp_conversion = gtag_report_whatsapp_conversion;
+
               if (typeof window !== 'undefined') {
                 document.addEventListener('click', function(e) {
-                  var target = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
-                  if (target) {
+                  // Clic Téléphone
+                  var telTarget = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+                  if (telTarget) {
                     gtag('event', 'conversion', {
                       'send_to': 'AW-18009548220/C17AC0bwxq8cELzLz4tD',
+                      'value': 1.0,
+                      'currency': 'EUR'
+                    });
+                  }
+
+                  // Clic WhatsApp
+                  var waTarget = e.target && e.target.closest ? e.target.closest('a[href*="whatsapp"], a[href*="wa.me"]') : null;
+                  if (waTarget) {
+                    gtag('event', 'conversion', {
+                      'send_to': 'AW-18009548220/IqnBCOnwxq8cELzLz4tD',
                       'value': 1.0,
                       'currency': 'EUR'
                     });
