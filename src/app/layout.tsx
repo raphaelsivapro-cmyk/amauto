@@ -30,7 +30,7 @@ export default function RootLayout({
 
               gtag('config', 'AW-18009548220');
 
-              function gtag_report_phone_conversion(url) {
+              function gtag_report_conversion(url) {
                 var callback = function () {
                   if (typeof(url) != 'undefined') {
                     window.location = url;
@@ -44,6 +44,7 @@ export default function RootLayout({
                 });
                 return false;
               }
+              window.gtag_report_conversion = gtag_report_conversion;
 
               if (typeof window !== 'undefined') {
                 document.addEventListener('click', function(e) {
